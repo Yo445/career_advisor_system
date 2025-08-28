@@ -1,59 +1,49 @@
-# CareerAdvisor
+# Intelligent Career Advisor and Job Application Platform
 
-This project was generated using [Angular CLI](https://github.com/angular/angular-cli) version 19.2.15.
+## Objective
+An AI-driven job application and career advisory platform that helps users manage their job searches, improve application success rates, and receive personalized career guidance.
 
-## Development server
+## Project Description
+This platform streamlines job searches and career development through intelligent tools that combine:
+- Software development
+- Data analytics
+- AI-driven insights  
 
-To start a local development server, run:
+Users can manage applications, receive tailored job recommendations, practice interviews with AI, and visualize job market trends.
 
-```bash
-ng serve
-```
+## Key Features
+1. **Job Application Management**  
+   Track job applications, add notes, set reminders, and visualize progress.
 
-Once the server is running, open your browser and navigate to `http://localhost:4200/`. The application will automatically reload whenever you modify any of the source files.
+2. **Personalized Job Recommendations**  
+   AI-powered job suggestions based on user profile, preferences, and market insights.
 
-## Code scaffolding
+3. **AI-Based Resume & Interview Feedback**  
+   Resume analysis and AI-powered mock interview simulations.
 
-Angular CLI includes powerful code scaffolding tools. To generate a new component, run:
+4. **Market Trends & Insights**  
+   Data visualization for job trends, salary ranges, and emerging skills.
 
-```bash
-ng generate component component-name
-```
+## Technologies
+- **Frontend:** Angular (or React / .NET)  
+- **Backend:** Relational database (SQL)  
+- **Machine Learning:**  
+  - Recommender System: Scikit-learn, TensorFlow, or PyTorch  
+  - NLP: Transformers (BERT / GPT)  
+  - Sentiment Analysis: VADER or TextBlob  
+- **Data Visualization:** D3.js or Plotly  
+- **APIs:** LinkedIn API, Glassdoor API  
 
-For a complete list of available schematics (such as `components`, `directives`, or `pipes`), run:
+## Team Roles
+- **Software Development Team:**  
+  Frontend & backend development, API integration, application management.
 
-```bash
-ng generate --help
-```
+- **Data Analytics Team:**  
+  Job market data collection, data visualization, user dashboards.
 
-## Building
+- **AI & Data Science Team:**  
+  Recommendation engine, NLP for job matching, AI interview simulations.
 
-To build the project run:
-
-```bash
-ng build
-```
-
-This will compile your project and store the build artifacts in the `dist/` directory. By default, the production build optimizes your application for performance and speed.
-
-## Running unit tests
-
-To execute unit tests with the [Karma](https://karma-runner.github.io) test runner, use the following command:
-
-```bash
-ng test
-```
-
-## Running end-to-end tests
-
-For end-to-end (e2e) testing, run:
-
-```bash
-ng e2e
-```
-
-Angular CLI does not come with an end-to-end testing framework by default. You can choose one that suits your needs.
-
-## Additional Resources
-
-For more information on using the Angular CLI, including detailed command references, visit the [Angular CLI Overview and Command Reference](https://angular.dev/tools/cli) page.
+## License
+This project is licensed under the [MIT License](./LICENSE).  
+© 2025 Youssef Ali
