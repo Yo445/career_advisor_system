@@ -1,4 +1,6 @@
 # Intelligent Career Advisor and Job Application Platform
+<img width="1527" height="391" alt="image" src="https://github.com/user-attachments/assets/6d8a1cfe-fdbc-4977-a10a-ca9971b9c5aa" />
+
 
 ## Objective
 An AI-driven job application and career advisory platform that helps users manage their job searches, improve application success rates, and receive personalized career guidance.
@@ -47,3 +49,4 @@ Users can manage applications, receive tailored job recommendations, practice in
 ## License
 This project is licensed under the [MIT License](./LICENSE).  
 © 2025 Youssef Ali
+
