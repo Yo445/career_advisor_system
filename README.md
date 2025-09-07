@@ -27,8 +27,8 @@ Users can manage applications, receive tailored job recommendations, practice in
    Data visualization for job trends, salary ranges, and emerging skills.
 
 ## Technologies
-- **Frontend:** Angular (or React / .NET)  
-- **Backend:** Relational database (SQL)  
+- **Frontend:** Angular 
+- **Backend:** Node Js , Relational database (SQL)  
 - **Machine Learning:**  
   - Recommender System: Scikit-learn, TensorFlow, or PyTorch  
   - NLP: Transformers (BERT / GPT)  
