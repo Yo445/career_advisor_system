@@ -1,0 +1,106 @@
+<main class="bg-white text-dark" #container>
+  <!--Header -->
+  <!--Header -->
+  <header
+    class="fixed-top px-4 py-2 border-bottom"
+    style="background: #f7f8fa; z-index: 1030; height: 80px"
+  >
+    <div class="d-flex justify-content-between align-items-center h-100">
+      <!-- Right Text -->
+      <div class="text-end small fw-semibold text-muted d-none d-md-block">
+        Explore career possibilities with AI | Pioneers of Digital Egypt
+      </div>
+
+      <!-- Center Logo -->
+      <h3 class="m-0 position-absolute start-50 translate-middle-x text-nowrap">
+        <span style="color: #353d4a">career</span>
+        <span class="gradient px-1">advisor</span>
+      </h3>
+
+      <!-- Left Button (conditionally shown) -->
+      @if (showScrollButton) {
+      <button class="btn btn-primary btn-sm btn-scroll">Let's Go</button>
+
+      }
+    </div>
+  </header>
+
+  <!-- Hero Section -->
+  <section
+    id="hero"
+    class="hero-section text-center py-5"
+    style="margin-top: 80px"
+  >
+    <h1 class="hero-title mb-3">
+      <span class="career px-2">career</span>
+      <span class="gradient px-2">advisor</span>
+    </h1>
+    <p class="hero-subtitle">
+      A playful way to explore career possibilities with AI
+    </p>
+    <button class="btn btn-primary btn-lg mt-3">start</button>
+    <div class="scroll-icon ex-2">
+      <span class="wheel"></span>
+    </div>
+  </section>
+
+  <!-- Feature Sections -->
+<section class="container my-5 d-flex flex-column align-items-center">
+  <!-- Section Title -->
+  <h2 class="fw-bold mb-3 text-center" style="font-size: 2rem; color: #374151;">
+    Features
+  </h2>
+  <div class="w-100" style="max-width: 800px">
+    @for (feature of features; track $index) {
+      <div class="mb-5 pb-3">
+        <!-- Title & Description -->
+        <h3 class="fw-semibold mb-3">{{ feature.title }}</h3>
+        <p class="text-muted mb-4">{{ feature.description }}</p>
+
+        <!-- Video/Image -->
+        <div
+          class="rounded overflow-hidden shadow-sm mx-auto"
+          style="height: 320px; max-width: 100%; background: #f3f4f6"
+        >
+          <div
+            class="w-100 h-100"
+            [ngStyle]="getImageStyle($index)"
+            style="background-size: cover; background-position: center"
+          ></div>
+        </div>
+      </div>
+    }
+  </div>
+</section>
+
+
+
+  <!-- Footer -->
+  <footer class="position-relative" style="background: #f7f8fa">
+    <div
+      class="container py-4 d-flex justify-content-between align-items-center"
+    >
+      <div></div>
+      <div class="text-center flex-grow-1">
+        <h1
+          class="fw-semibold m-0"
+          style="
+            font-size: 2em;
+            line-height: 100%;
+            background: linear-gradient(to right, #9ca3af, #374151);
+            background-clip: text;
+            -webkit-background-clip: text;
+            -webkit-text-fill-color: transparent;
+          "
+        >
+          career advisor
+        </h1>
+      </div>
+      <div>
+        <a href="#" class="text-decoration-none small" style="color: #3e4655"
+          >Privacy & Terms</a
+        >
+      </div>
+    </div>
+  </footer>
+</main>
