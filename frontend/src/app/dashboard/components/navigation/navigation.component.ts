@@ -16,10 +16,10 @@ import { RouterModule, Router } from '@angular/router';interface NavigationItem 
 export class NavigationComponent  {
 
     navigationItems: NavigationItem[] = [
-    { path: '/explore-path', label: 'Explore Path', icon: 'fas fa-compass' },
-    { path: '/applications', label: 'Applications', icon: 'fas fa-file-alt' },
-    { path: '/mock-interview', label: 'Mock Interview', icon: 'fas fa-microphone' },
-    { path: '/market-trends', label: 'Market Trends', icon: 'fas fa-chart-line' }
+    { path: 'jobs-feed', label: 'Explore Path', icon: 'fas fa-compass' },
+    { path: 'applications', label: 'Applications', icon: 'fas fa-file-alt' },
+    { path: 'mock-interview', label: 'Mock Interview', icon: 'fas fa-microphone' },
+    { path: 'market-trends', label: 'Market Trends', icon: 'fas fa-chart-line' }
   ];
 
   constructor(private router: Router) {}

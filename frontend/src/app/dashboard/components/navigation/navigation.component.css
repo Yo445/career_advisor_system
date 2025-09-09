@@ -44,8 +44,6 @@
     background: linear-gradient(135deg, #6366f1 0%, #8b5cf6 100%);
     color: white;
     border-color: transparent;
-    transform: translateY(-1px);
-    box-shadow: 0 4px 12px rgba(99, 102, 241, 0.3), 0 2px 6px rgba(99, 102, 241, 0.2);
 
     i {
       opacity: 1;
