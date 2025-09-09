@@ -1,1 +1,93 @@
-<p>jobs-feed works!</p>
+<div class="explore-path-container">
+      <!-- Hero Section -->
+      <div class="hero-section text-center mb-5">
+        <h1 class="hero-title">Explore New Career Opportunities</h1>
+      </div>
+
+      <!-- Search and Filters -->
+      <div class="search-filters-section mb-5">
+        <div class="row justify-content-center">
+          <div class="col-lg-10">
+            <div class="search-card">
+              <div class="row g-3">
+                <div class="col-md-4">
+                  <div class="form-floating">
+                    <input
+                      type="text"
+                      class="form-control"
+                      id="jobSearch"
+                      placeholder="Search for job"
+                      [(ngModel)]="searchQuery"
+                      (ngModelChange)="filterJobs()">
+                    <label for="jobSearch">Search for job</label>
+                  </div>
+                </div>
+                <div class="col-md-4">
+                  <div class="form-floating">
+                    <select class="form-select" id="careerLevel" [(ngModel)]="selectedLevel" (ngModelChange)="filterJobs()">
+                      <option value="">All Levels</option>
+                      <option value="Entry Level">Entry Level</option>
+                      <option value="Mid Level">Mid Level</option>
+                      <option value="Senior Level">Senior Level</option>
+                      <option value="Executive">Executive</option>
+                    </select>
+                    <label for="careerLevel">Career level</label>
+                  </div>
+                </div>
+                <div class="col-md-4">
+                  <div class="form-floating">
+                    <select class="form-select" id="country" [(ngModel)]="selectedCountry" (ngModelChange)="filterJobs()">
+                      <option value="">All Countries</option>
+                      <option value="Egypt">Egypt</option>
+                      <option value="UAE">UAE</option>
+                      <option value="Saudi Arabia">Saudi Arabia</option>
+                      <option value="Remote">Remote</option>
+                    </select>
+                    <label for="country">Country</label>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <!-- Job Listings -->
+      <div class="job-listings-section">
+        <div class="row justify-content-center">
+          <div class="col-lg-10">
+            <div class="job-listing-card" *ngFor="let job of filteredJobs">
+              <div class="row align-items-center">
+                <div class="col-md-8">
+                  <div class="job-info">
+                    <div class="job-header mb-2">
+                      <h3 class="job-title">{{ job.title }}</h3>
+                      <div class="job-badges">
+                        <span class="badge badge-type">{{ job.type }}</span>
+                        <span class="badge badge-category">{{ job.category }}</span>
+                      </div>
+                    </div>
+                    <div class="company-info mb-2">
+                      <strong>{{ job.company }}</strong> - {{ job.location }}
+                    </div>
+                    <div class="job-tags mb-2">
+                      <span class="tag" *ngFor="let tag of job.tags">{{ tag }}</span>
+                    </div>
+                    <div class="job-meta">
+                      <small class="text-muted">{{ job.postedDays }} days ago</small>
+                    </div>
+                  </div>
+                </div>
+                <div class="col-md-4 text-center">
+                  <div class="company-logo">
+                    <div class="logo-placeholder">
+                      Logo {{ job.id }}
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>

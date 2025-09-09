@@ -1,0 +1,92 @@
+.header-container {
+  background-color: #E5E7EE;
+  border-bottom: 1px solid #CBD2DC;
+}
+
+.header-row {
+  display: flex;
+  justify-content: space-between;
+}
+
+/* Force equal space left + right columns so logo is always centered */
+.header-col {
+  flex: 1;
+}
+
+.header-col.center {
+  flex: 1;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.brand-text {
+  font-size: 1.75rem;
+  font-weight: 400;
+  color: #333;
+  letter-spacing: 0.5px;
+}
+.brand-accent {
+  color: #6366f1;
+  font-weight: 500;
+}
+
+.tagline {
+  font-size: 0.8rem;
+  color: #6b7280;
+  white-space: nowrap;
+}
+
+/* User menu */
+.user-menu-btn {
+  border: none !important;
+  box-shadow: none !important;
+  color: #6b7280;
+  padding: 0.5rem;
+  background: transparent !important;
+}
+.user-menu-btn:hover {
+  color: #374151;
+}
+.user-menu-btn:focus {
+  box-shadow: none !important;
+}
+.user-menu-btn::after {
+  display: none;
+}
+
+/* Dropdown styling */
+.dropdown-menu {
+  border: 1px solid #e5e7eb;
+  box-shadow: 0 4px 6px -1px rgba(0, 0, 0, 0.1),
+              0 2px 4px -1px rgba(0, 0, 0, 0.06);
+  border-radius: 0.5rem;
+  padding: 0.5rem 0;
+}
+.dropdown-item {
+  padding: 0.5rem 1rem;
+  font-size: 0.875rem;
+  color: #374151;
+}
+.dropdown-item:hover {
+  background-color: #f9fafb;
+  color: #111827;
+}
+.dropdown-item i {
+  color: #6b7280;
+  width: 16px;
+}
+.dropdown-divider {
+  margin: 0.5rem 0;
+  border-color: #e5e7eb;
+}
+
+/* Responsive fixes */
+@media (max-width: 768px) {
+  .header-col.left {
+    display: none !important; /* hide tagline */
+  }
+  .brand-text {
+    font-size: 1.25rem;
+  }
+}

@@ -1,0 +1,11 @@
+ <nav class="navigation-container">
+
+            <a
+              *ngFor="let item of navigationItems"
+              [routerLink]="item.path"
+              routerLinkActive="active"
+              class="nav-tab">
+              <i [class]="item.icon"></i>
+              <span>{{ item.label }}</span>
+            </a>
+    </nav>

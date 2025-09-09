@@ -10,7 +10,7 @@
 
 
 .btn-primary {
-  background-color: #2563eb;
+  background-color: #688AE9;
   border: none;
   border-radius: 12px;
   font-size: 1.1rem;
@@ -20,7 +20,7 @@
 }
 
 .btn-primary:hover {
-  background-color: #1e40af; /* Darker on hover */
+  background-color: #4b65ac; /* Darker on hover */
 }
 
 
