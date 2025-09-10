@@ -1,0 +1,19 @@
+<div class="sidebar h-100 d-flex flex-column">
+  <div class="sidebar-header p-4 border-bottom">
+    <h5 class="mb-0 text-dark fw-bold">Profile</h5>
+  </div>
+
+  <nav class="sidebar-nav flex-grow-1 p-3">
+    <ul class="nav nav-pills flex-column">
+      <li class="nav-item mb-1" *ngFor="let item of menuItems">
+        <a
+          href="javascript:void(0)"
+          class="nav-link d-flex align-items-center py-3 px-3 rounded-2"
+          [class.active]="activeItem === item.id"
+          (click)="selectMenuItem(item.id)">
+          <span>{{ item.label }}</span>
+        </a>
+      </li>
+    </ul>
+  </nav>
+</div>
