@@ -1,48 +1,11 @@
-<!-- Fixed Sidebar for Desktop -->
-<div class="sidebar-fixed d-none d-md-block">
-  <app-side-bar
-    [activeItem]="activeMenuItem"
-    (menuItemSelected)="onMenuItemSelected($event)">
-  </app-side-bar>
-</div>
+<div class="profile-container">
+    <!-- Content Area -->
+    <main class="content-area">
+        <div class="container-fluid">
+            <router-outlet></router-outlet>
+        </div>
+    </main>
 
-<!-- Main Content with Sidebar Margin -->
-<div class="content-with-sidebar">
-  <!-- Mobile menu toggle -->
-  <button
-    class="btn btn-outline-secondary d-md-none m-3 position-fixed"
-    style="z-index: 1001; top: 0; left: 0;"
-    (click)="toggleSidebar()"
-    [attr.aria-label]="sidebarVisible ? 'Close menu' : 'Open menu'">
-    <span [innerHTML]="sidebarVisible ? '✕' : '☰'"></span>
-  </button>
-
-  <!-- Content Area -->
-  <div class="p-4 pt-5 pt-md-4">
-    <!-- <app-upload-cv *ngIf="activeMenuItem === 'upload-cv'"></app-upload-cv> -->
-
-    <!-- Placeholder for other components -->
-    <div *ngIf="activeMenuItem !== 'upload-cv'" class="text-center py-5">
-      <h3>{{ getPageTitle() }}</h3>
-      <p class="text-muted">This section is coming soon...</p>
-    </div>
-  </div>
-</div>
-
-<!-- Mobile sidebar overlay -->
-<div
-  class="position-fixed top-0 start-0 w-100 h-100 bg-dark bg-opacity-50 d-md-none"
-  [class.d-none]="!sidebarVisible"
-  style="z-index: 999;"
-  (click)="closeSidebar()">
-</div>
-
-<!-- Mobile sidebar -->
-<div
-  class="sidebar-fixed d-md-none"
-  [class.sidebar-open]="sidebarVisible">
-  <app-side-bar
-    [activeItem]="activeMenuItem"
-    (menuItemSelected)="onMenuItemSelected($event)">
-  </app-side-bar>
+    <!-- Bottom Navigation Bar -->
+    <app-nav-bottom></app-nav-bottom>
 </div>

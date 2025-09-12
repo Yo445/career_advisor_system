@@ -10,7 +10,7 @@
 
 
 .btn-primary {
-  background: linear-gradient(135deg, #6366f1 0%, #8b5cf6 100%);
+  background: linear-gradient(135deg,#688ae9 0%,#b46dc6 100%);
   border: none;
   border-radius: 12px;
   font-size: 1.1rem;
@@ -20,19 +20,9 @@
 }
 
 .btn-primary:hover {
-  background: linear-gradient(135deg, #5355c8 0%, #5a3ba0 100%);
+  background: linear-gradient(135deg,#4f69af 0%,#7a4986 100%);
 }
 
-
-
-
-
-.career-wrapper {
-  justify-content: center;
-  align-items: center;
-  gap: 20px;
-  flex-wrap: wrap;
-}
 
 
 .hero-title {
@@ -43,8 +33,8 @@
 
 
 .hero-subtitle {
-  font-size: 1.75rem;
-  font-weight: 300;
+  font-size: 1.5rem; /* Responsive scaling */
+  font-family: 'Albert Sans', sans-serif;
   color: #6b7280;
   max-width: 600px;
   margin: 0 auto 1.5rem;
@@ -55,37 +45,15 @@
   font-family: 'Albert Sans', sans-serif;
 }
 
-.gradient {
-  font-weight: 700;
-  background: linear-gradient(90deg, #688ae9, #c66d7b);
-  background-size: 200% auto;
-  background-clip: text;
-  -webkit-background-clip: text;
-  color: transparent;
-  -webkit-text-fill-color: transparent;
-  animation: textShine 5s ease-in-out infinite alternate;
-  font-family: 'Sulphur Point', sans-serif;
-}
-
-@keyframes textShine {
-  from {
-    background-position: 0% 50%;
-  }
-  to {
-    background-position: 100% 50%;
-  }
-}
-
-
 
 .scroll-icon {
 	position: relative;
-	margin: 2em;
+	margin: 1em;
 	width: 2em;
 	height: 3.5em;
-	border: .15em solid #ccd2db;
+	border: .13em solid #ccd2db90;
 	border-radius: 2em;
-  margin-top: 5rem;
+  margin-top: 3rem;
 }
 
 
@@ -96,7 +64,7 @@
 	top: 15%;
 	width: .6em;
 	height: 1.5em;
-	border: .1em solid #ccd2db;
+	border: .1em solid #ccd2db90;
 	transform: translate(-50%, 0);
 	border-radius: .6em;
 	overflow: hidden;
@@ -109,7 +77,7 @@
 	right: 0;
 	top: -100%;
 	bottom: 0;
-	background-image: linear-gradient(0deg, #ccd2db 2px, #ddd 1px);
+	background-image: linear-gradient(0deg, #ccd2db 1.5px, #e1dfdf 1px);
 	background-size: 100% 6px;
 	opacity: .5;
 	animation: ex-2-wheel 1s ease-in-out infinite;

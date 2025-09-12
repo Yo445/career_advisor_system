@@ -18,7 +18,7 @@
 
       <!-- Left Button (conditionally shown) -->
       @if (showScrollButton) {
-      <button class="btn btn-primary btn-sm btn-scroll">Let's Go</button>
+      <button (click)="Register()" class="btn btn-primary btn-sm btn-scroll">Let's Go</button>
 
       }
     </div>
@@ -37,14 +37,14 @@
     <p class="hero-subtitle">
       A playful way to explore career possibilities with AI
     </p>
-    <button class="btn btn-primary btn-lg mt-3">start</button>
+    <button (click)="Register()" class="btn btn-primary btn-lg mt-3">start</button>
     <div class="scroll-icon ex-2">
       <span class="wheel"></span>
     </div>
   </section>
 
   <!-- Feature Sections -->
-<section class="container my-5 d-flex flex-column align-items-center">
+<section class="container d-flex flex-column align-items-center">
   <!-- Section Title -->
   <h2 class="fw-bold mb-3 text-center" style="font-size: 2rem; color: #374151;">
     Features

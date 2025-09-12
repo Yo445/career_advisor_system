@@ -27,6 +27,15 @@
   align-items: center;
 }
 
+.dropdown-item:hover{
+  background-color: #e5e7ee;
+}
+
+.dropdown-item.active{
+  background-color: #e5e7ee;
+  color: #333;
+}
+
 .brand-text {
   font-size: 1.75rem;
   font-weight: 400;
@@ -34,12 +43,17 @@
   letter-spacing: 0.5px;
 }
 
+.logout:hover{
+  color: #c66d7b;
+background-color:#c66d7a28 ;
+}
 /* User menu button */
 .user-menu-btn {
   border: 1px solid #D1D5DB;
   background: white;
   border-radius: 100%;
   padding: 0.2rem;
+  width: 121%;
   color: #6b7280;
 }
 .user-menu-btn:hover {
@@ -68,11 +82,11 @@
   align-items: center;
   gap: 0.75rem;
   padding: 0.875rem 1.75rem;
-  background-color: white;
+  background-color: white; /* background-color: #EEF0F4; */
   border: 1px solid rgba(0, 0, 0, 0.08);
   border-radius: 2rem;
   text-decoration: none;
-  color: #64748b;
+  color: #64748b; /* color: #AAB5C3; */
   font-weight: 500;
   font-size: 0.90rem;
   transition: all 0.2s ease;
@@ -80,13 +94,14 @@
   justify-content: center;
   position: relative;
 }
+
 .nav-tab:hover {
   background: #fefefe;
   color: #475569;
   border-color: rgba(136, 130, 139, 0.5);
 }
 .nav-tab.active {
-  background: linear-gradient(135deg,#6366f1 0%,#8b5cf6 100%);
+  background: linear-gradient(135deg,#688ae9 0%,#b46dc6 100%);
   color: white;
   border: none;
 }

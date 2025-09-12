@@ -36,7 +36,7 @@ export class JobsFeedComponent implements OnInit {
       type: 'Internship',
       category: 'Remote',
       level: 'Entry Level',
-      tags: ['Student', '0-1 Yrs of Exp', 'Bootstrap', 'Angular', 'Computer Science', 'CSS3', 'front-end', 'Git', 'HTML5', 'JavaScript', 'Software Development', 'UI'],
+      tags: ['Student', '0-1 Yrs of Exp', 'Bootstrap', 'Angular', 'Computer Science', 'CSS3', 'front-end', 'Git', 'HTML5', 'JavaScript'],
       description: '',
       postedDays: 16
     },
@@ -54,6 +54,123 @@ export class JobsFeedComponent implements OnInit {
     },
     {
       id: 3,
+      title: 'Backend Developer',
+      company: 'Confidential',
+      location: 'Cairo, Egypt',
+      type: 'Full Time',
+      category: 'Remote',
+      level: 'Entry Level',
+      tags: ['Entry Level', '0-3 Yrs of Exp', 'WordPress', 'CSS', 'HTML', 'IT/Software Development', 'Engineering', 'Telecom/Technology'],
+      description: '',
+      postedDays: 2
+    }
+    ,
+    {
+      id: 4,
+      title: 'Backend Developer',
+      company: 'Confidential',
+      location: 'Cairo, Egypt',
+      type: 'Full Time',
+      category: 'Remote',
+      level: 'Entry Level',
+      tags: ['Entry Level', '0-3 Yrs of Exp', 'WordPress', 'CSS', 'HTML', 'IT/Software Development', 'Engineering', 'Telecom/Technology'],
+      description: '',
+      postedDays: 2
+    }
+    ,
+    {
+      id: 4,
+      title: 'Backend Developer',
+      company: 'Confidential',
+      location: 'Cairo, Egypt',
+      type: 'Full Time',
+      category: 'Remote',
+      level: 'Entry Level',
+      tags: ['Entry Level', '0-3 Yrs of Exp', 'WordPress', 'CSS', 'HTML', 'IT/Software Development', 'Engineering', 'Telecom/Technology'],
+      description: '',
+      postedDays: 2
+    }
+    ,
+    {
+      id: 4,
+      title: 'Backend Developer',
+      company: 'Confidential',
+      location: 'Cairo, Egypt',
+      type: 'Full Time',
+      category: 'Remote',
+      level: 'Entry Level',
+      tags: ['Entry Level', '0-3 Yrs of Exp', 'WordPress', 'CSS', 'HTML', 'IT/Software Development', 'Engineering', 'Telecom/Technology'],
+      description: '',
+      postedDays: 2
+    }
+    ,
+    {
+      id: 4,
+      title: 'Backend Developer',
+      company: 'Confidential',
+      location: 'Cairo, Egypt',
+      type: 'Full Time',
+      category: 'Remote',
+      level: 'Entry Level',
+      tags: ['Entry Level', '0-3 Yrs of Exp', 'WordPress', 'CSS', 'HTML', 'IT/Software Development', 'Engineering', 'Telecom/Technology'],
+      description: '',
+      postedDays: 2
+    }
+    ,
+    {
+      id: 4,
+      title: 'Backend Developer',
+      company: 'Confidential',
+      location: 'Cairo, Egypt',
+      type: 'Full Time',
+      category: 'Remote',
+      level: 'Entry Level',
+      tags: ['Entry Level', '0-3 Yrs of Exp', 'WordPress', 'CSS', 'HTML', 'IT/Software Development', 'Engineering', 'Telecom/Technology'],
+      description: '',
+      postedDays: 2
+    }
+    ,
+    {
+      id: 4,
+      title: 'Backend Developer',
+      company: 'Confidential',
+      location: 'Cairo, Egypt',
+      type: 'Full Time',
+      category: 'Remote',
+      level: 'Entry Level',
+      tags: ['Entry Level', '0-3 Yrs of Exp', 'WordPress', 'CSS', 'HTML', 'IT/Software Development', 'Engineering', 'Telecom/Technology'],
+      description: '',
+      postedDays: 2
+    }
+    ,
+    {
+      id: 4,
+      title: 'Backend Developer',
+      company: 'Confidential',
+      location: 'Cairo, Egypt',
+      type: 'Full Time',
+      category: 'Remote',
+      level: 'Entry Level',
+      tags: ['Entry Level', '0-3 Yrs of Exp', 'WordPress', 'CSS', 'HTML', 'IT/Software Development', 'Engineering', 'Telecom/Technology'],
+      description: '',
+      postedDays: 2
+    }
+    ,
+    {
+      id: 4,
+      title: 'Backend Developer',
+      company: 'Confidential',
+      location: 'Cairo, Egypt',
+      type: 'Full Time',
+      category: 'Remote',
+      level: 'Entry Level',
+      tags: ['Entry Level', '0-3 Yrs of Exp', 'WordPress', 'CSS', 'HTML', 'IT/Software Development', 'Engineering', 'Telecom/Technology'],
+      description: '',
+      postedDays: 2
+    }
+    ,
+    {
+      id: 4,
       title: 'Backend Developer',
       company: 'Confidential',
       location: 'Cairo, Egypt',

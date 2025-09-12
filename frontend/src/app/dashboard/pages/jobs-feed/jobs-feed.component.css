@@ -1,16 +1,18 @@
 .explore-path-container {
   padding: 3rem 1rem 2rem 1rem;
-  background: linear-gradient(135deg, #f8fafc 0%, #f1f5f9 100%);
   min-height: calc(100vh - 200px);
 }
 
 .hero-section {
   margin-bottom: 3rem;
+  color: #64748b70;
+  /* display: flex;
+  justify-content: center; */
 
   .hero-title {
-    font-size: 2.75rem;
-    font-weight: 300;
-    color: #1e293b;
+    font-size: 2rem;
+    font-weight: 200;
+    font-family: "Albert Sans", sans-serif;
     margin-bottom: 0;
     letter-spacing: -0.5px;
 
@@ -30,10 +32,8 @@
   .search-card {
     background: rgba(255, 255, 255, 0.95);
     border-radius: 1.5rem;
-    padding: 2.5rem;
-    box-shadow: 0 8px 25px rgba(0, 0, 0, 0.08), 0 3px 10px rgba(0, 0, 0, 0.05);
-    backdrop-filter: blur(10px);
-    border: 1px solid rgba(255, 255, 255, 0.2);
+    padding: 1.2rem;
+    border: 1px solid #0003;
 
     .form-floating {
       .form-control,
@@ -41,7 +41,7 @@
         border: 1px solid #e2e8f0;
         border-radius: 0.875rem;
         padding: 1.125rem 1rem;
-        font-size: 0.95rem;
+        font-size: 0.8rem;
         background-color: #ffffff;
         transition: all 0.2s ease;
 
@@ -58,7 +58,7 @@
 
       label {
         color: #64748b;
-        font-size: 0.875rem;
+        font-size: 0.8rem;
         font-weight: 500;
       }
     }
@@ -72,199 +72,150 @@
   }
 }
 
-.job-listings-section {
-  .job-listing-card {
-    background: white;
-    border-radius: 1.25rem;
-    padding: 2rem;
-    margin-bottom: 1.5rem;
-    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.05), 0 1px 3px rgba(0, 0, 0, 0.1);
-    border: 1px solid #f1f5f9;
-    transition: all 0.3s ease;
-    position: relative;
-    overflow: hidden;
+.job-card {
+  background: #fff;
+  border-radius: 0.75rem;
+  padding: 0.2rem;
+  box-shadow: 0 2px 6px rgba(0, 0, 0, 0.05);
+  border: 1px solid rgba(128, 128, 128, 0.379);
+  transition: all 0.6s cubic-bezier(0.25, 0.46, 0.45, 0.94);
+  position: relative;
+  overflow: visible;
+  cursor: pointer;
+}
 
-    &::before {
-      content: '';
-      position: absolute;
-      top: 0;
-      left: 0;
-      right: 0;
-      height: 3px;
-      background: linear-gradient(90deg, #6366f1 0%, #8b5cf6 100%);
-      opacity: 0;
-      transition: opacity 0.3s ease;
-    }
+.job-card::before {
+  position: absolute;
+  inset: -3px;
+  border-radius: 0.75rem;
+  padding: 3px;
+  background: linear-gradient(45deg, #688ae9, #c66d7b, #688ae9, #c66d7b);
+  background-size: 400% 400%;
+  z-index: -1;
+  opacity: 0;
+  transition: all 0.4s ease;
+  filter: blur(0px);
+}
 
-    &:hover {
-      box-shadow: 0 10px 25px rgba(0, 0, 0, 0.1), 0 4px 10px rgba(0, 0, 0, 0.05);
-      transform: translateY(-2px);
-      border-color: #e2e8f0;
+.job-card::after {
+  content: "";
+  position: absolute;
+  inset: -6px;
+  border-radius: 0.75rem;
+  background: linear-gradient(45deg, #688ae9, #c66d7b, #688ae9, #c66d7b);
+  background-size: 400% 400%;
+  z-index: -2;
+  opacity: 0;
+  transition: all 0.4s ease;
+  filter: blur(8px);
+}
 
-      &::before {
-        opacity: 1;
-      }
-    }
+.job-card:hover::before {
+  opacity: 1;
+  animation: borderGradient 2s linear infinite;
+}
 
-    .job-info {
-      .job-header {
-        display: flex;
-        justify-content: space-between;
-        align-items: flex-start;
-        flex-wrap: wrap;
-        gap: 1rem;
-        margin-bottom: 1rem;
+.job-card:hover::after {
+  opacity: 0.6;
+  animation: borderGradient 2s linear infinite;
+}
 
-        .job-title {
-          font-size: 1.375rem;
-          font-weight: 600;
-          color: #6366f1;
-          margin: 0;
-          flex: 1;
-          min-width: 200px;
-          line-height: 1.3;
-        }
+.job-card:hover {
+  transform: translateY(-2px);
+  box-shadow: 0 8px 25px rgba(0, 0, 0, 0.15);
+}
 
-        .job-badges {
-          display: flex;
-          gap: 0.5rem;
-          flex-wrap: wrap;
+.job-card-body {
+  position: relative;
+  z-index: 1;
+  background: #fff;
+  border-radius: 0.5rem;
+  padding: 0.5rem;
+}
 
-          .badge {
-            padding: 0.375rem 0.875rem;
-            font-size: 0.75rem;
-            font-weight: 600;
-            border-radius: 1.5rem;
-            text-transform: uppercase;
-            letter-spacing: 0.5px;
+.job-title {
+  font-size: 1.1rem;
+  font-weight: 600;
+  color: #333;
+  margin-bottom: 0.5rem;
+  transition: color 0.3s ease;
+}
 
-            &.badge-type {
-              background: linear-gradient(135deg, #dbeafe 0%, #bfdbfe 100%);
-              color: #1d4ed8;
-              border: 1px solid #93c5fd;
-            }
+.job-card:hover .job-title {
+  color: #688ae9;
+}
 
-            &.badge-category {
-              background: linear-gradient(135deg, #fae8ff 0%, #f3e8ff 100%);
-              color: #7c3aed;
-              border: 1px solid #c084fc;
-            }
-          }
-        }
-      }
+.job-company {
+  font-size: 0.95rem;
+  color: #444;
+}
 
-      .company-info {
-        font-size: 1.125rem;
-        color: #1e293b;
-        margin-bottom: 1rem;
-        font-weight: 500;
+.job-location {
+  font-size: 0.85rem;
+}
 
-        strong {
-          color: #0f172a;
-        }
-      }
+.job-tags {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 0.3rem;
+}
 
-      .job-tags {
-        display: flex;
-        flex-wrap: wrap;
-        gap: 0.5rem;
-        margin-bottom: 1rem;
+.tag {
+  background: #f8f9fa;
+  padding: 0.2rem 0.5rem;
+  border-radius: 0.5rem;
+  font-size: 0.75rem;
+  border: 1px solid #dee2e6;
+  transition: all 0.3s ease;
+}
 
-        .tag {
-          background: linear-gradient(135deg, #f8fafc 0%, #f1f5f9 100%);
-          color: #475569;
-          padding: 0.25rem 0.75rem;
-          border-radius: 0.75rem;
-          font-size: 0.8rem;
-          font-weight: 500;
-          border: 1px solid #e2e8f0;
-          transition: all 0.2s ease;
+.job-card:hover .tag {
+  background: linear-gradient(
+    45deg,
+    rgba(104, 138, 233, 0.1),
+    rgba(198, 109, 123, 0.1)
+  );
+  border-color: rgba(104, 138, 233, 0.3);
+  transform: scale(1.05);
+}
 
-          &:hover {
-            background: linear-gradient(135deg, #f1f5f9 0%, #e2e8f0 100%);
-            transform: translateY(-1px);
-          }
-        }
-      }
-
-      .job-meta {
-        color: #64748b;
-        font-size: 0.875rem;
-        font-weight: 500;
-      }
-    }
-
-    .company-logo {
-      .logo-placeholder {
-        width: 90px;
-        height: 70px;
-        background: linear-gradient(135deg, #f8fafc 0%, #f1f5f9 100%);
-        border-radius: 0.75rem;
-        display: flex;
-        align-items: center;
-        justify-content: center;
-        font-size: 0.75rem;
-        color: #64748b;
-        margin: 0 auto;
-        border: 2px solid #e2e8f0;
-        font-weight: 600;
-        transition: all 0.3s ease;
-      }
-    }
+/* Enhanced Animated Gradient Keyframes */
+@keyframes borderGradient {
+  0% {
+    background-position: 0% 50%;
+  }
+  25% {
+    background-position: 100% 0%;
+  }
+  50% {
+    background-position: 100% 100%;
+  }
+  75% {
+    background-position: 0% 100%;
+  }
+  100% {
+    background-position: 0% 50%;
   }
 }
 
- /* Responsive adjustments */
-@media (max-width: 768px) {
-  .explore-path-container {
-    padding: 2rem 1rem;
+/* Responsive adjustments */
+@media (max-width: 992px) {
+  .job-title {
+    font-size: 1rem;
   }
+}
 
-  .job-listings-section {
-    .job-listing-card {
-      padding: 1.5rem;
-
-      .job-info {
-        .job-header {
-          .job-title {
-            font-size: 1.25rem;
-          }
-
-          .job-badges .badge {
-            font-size: 0.7rem;
-            padding: 0.25rem 0.6rem;
-          }
-        }
-
-        .company-info {
-          font-size: 1rem;
-        }
-
-        .job-tags .tag {
-          font-size: 0.75rem;
-          padding: 0.2rem 0.6rem;
-        }
-      }
-
-      .company-logo .logo-placeholder {
-        width: 70px;
-        height: 55px;
-        margin-top: 1rem;
-      }
-    }
+@media (max-width: 768px) {
+  .job-card {
+    padding: 0.8rem;
   }
 }
 
 @media (max-width: 576px) {
-  .explore-path-container {
-    padding: 1.5rem 0.75rem;
+  .job-title {
+    font-size: 0.95rem;
   }
-
-  .hero-section {
-    margin-bottom: 2rem;
-  }
-
-  .search-filters-section {
-    margin-bottom: 2rem;
+  .tag {
+    font-size: 0.7rem;
   }
 }

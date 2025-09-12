@@ -2,7 +2,6 @@ import { Component, OnInit } from '@angular/core';
 import { RouterModule, Router } from '@angular/router';
 import { CommonModule } from '@angular/common';
 
-
 interface NavigationItem {
   path: string;
   label: string;
@@ -18,13 +17,11 @@ interface NavigationItem {
 })
 export class HeaderComponent  {
 
-
-
     navigationItems: NavigationItem[] = [
-    { path: 'jobs-feed', label: 'Explore Path', icon: 'fas fa-compass' },
-    { path: 'applications', label: 'Applications', icon: 'fas fa-file-alt' },
-    { path: 'mock-interview', label: 'Mock Interview', icon: 'fas fa-microphone' },
-    { path: 'market-trends', label: 'Market Trends', icon: 'fas fa-chart-line' }
+    { path: 'jobs-feed', label: 'Explore Path', icon: 'fa-solid fa-certificate' },
+    { path: 'applications', label: 'Applications', icon: 'fa-solid fa-book' },
+    { path: 'mock-interview', label: 'Mock Interview', icon: 'fa-solid fa-chalkboard-user' },
+    { path: 'market-trends', label: 'Market Trends', icon: 'fa-solid fa-chart-gantt' }
   ];
 
   constructor(private router: Router) {}

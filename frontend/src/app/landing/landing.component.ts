@@ -10,6 +10,7 @@ import {
 } from '@angular/core';
 import { trigger, state, style, transition, animate } from '@angular/animations';
 import { CommonModule, NgStyle, isPlatformBrowser } from '@angular/common';
+import { Router } from '@angular/router';
 
 interface Features {
   title?: string;
@@ -66,7 +67,7 @@ export class LandingComponent implements OnInit, OnDestroy {
   cardStates: any[] = [];
   private scrollListener!: () => void;
 
-  constructor(@Inject(PLATFORM_ID) private platformId: Object) {}
+  constructor(@Inject(PLATFORM_ID) private platformId: Object, private _Router :Router) {}
 
     showScrollButton = false;
 
@@ -106,5 +107,10 @@ export class LandingComponent implements OnInit, OnDestroy {
     return {
       transform: `scale(${state.imageScale})`,
     };
+  }
+
+
+  Register(){
+    this._Router.navigate(['/signup'])
   }
 }
