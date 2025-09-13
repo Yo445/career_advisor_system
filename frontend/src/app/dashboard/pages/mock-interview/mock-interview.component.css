@@ -1,0 +1,209 @@
+ .container {
+     display: flex;
+      gap: 80px;
+      width: 100%;
+        }
+ 
+ body {
+            background-color: #f8f9fa;
+            margin: 0;
+            padding: 40px;
+            display: flex;
+            justify-content: center;
+            align-items: flex-start;
+            min-height: 100px;
+            color: #343a40;
+        }
+
+    
+        .mock-interview-section {
+            flex: 2;
+        }
+
+        .mock-interview-section h1 {
+            font-size: 2.2rem;
+            font-weight: 700;
+            margin-bottom: 15px;
+            color: #212529;
+        }
+
+        .mock-interview-section p {
+            font-size: 1rem;
+            line-height: 1.6;
+            color: #495057;
+        }
+
+        .chat-area {
+            margin-top: 40px;
+            display: flex;
+            flex-direction: column;
+            gap: 20px;
+        }
+
+        .chatting {
+            display: flex;
+            align-items: flex-start;
+            gap: 15px;
+            max-width: 600px;
+        }
+
+        .chatting.ai .avatar {
+            background-color: #e0f2f7; 
+        }
+
+        .chatting.user .avatar {
+            background-color: #ffe0b2; 
+        }
+
+        .avatar {
+            width: 40px;
+            height: 40px;
+            border-radius: 50%;
+            background-color: #ccc; 
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            font-size: 0.9rem;
+            font-weight: 600;
+            color: #fff;
+            flex-shrink: 0;
+            border: 1px solid rgba(0,0,0,0.05);
+            overflow: hidden; 
+        }
+
+        .avatar img {
+            width: 100%;
+            height: 100%;
+            object-fit: cover;
+        }
+
+        .message-content {
+            background-color: #fff;
+            padding: 18px 20px;
+            border-radius: 12px;
+            box-shadow: 0 2px 8px rgba(0, 0, 0, 0.05);
+            font-size: 0.95rem;
+            line-height: 1.5;
+            color: #343a40;
+            flex-grow: 1;
+        }
+
+        .message-content strong {
+            display: block;
+            font-weight: 600;
+            margin-bottom: 5px;
+            color: #212529;
+        }
+
+        .input-area {
+            display: flex;
+            align-items: center;
+            gap: 15px;
+            margin-top: 20px;
+            max-width: 600px;
+        }
+
+        .input-area input {
+            flex-grow: 1;
+            padding: 15px 20px;
+            border: 1px solid #dee2e6;
+            border-radius: 10px;
+            font-size: 1rem;
+            outline: none;
+            transition: border-color 0.2s;
+        }
+
+        .input-area input:focus {
+            border-color: #007bff;
+        }
+
+        .input-area button {
+            background-color: #007bff;
+            color: #fff;
+            border: none;
+            padding: 15px 30px;
+            border-radius: 10px;
+            font-size: 1rem;
+            font-weight: 500;
+            cursor: pointer;
+            transition: background-color 0.2s;
+        }
+
+        .input-area button:hover {
+            background-color: #0056b3;
+        }
+
+        .feedback-section {
+            flex: 1;
+            padding: 30px;
+            background-color: #fff;
+            border-radius: 12px;
+            box-shadow: 0 4px 15px rgba(0, 0, 0, 0.08);
+            max-width: 380px;
+            height: fit-content;
+        }
+
+        .feedback-section h2 {
+            font-size: 1.5rem;
+            font-weight: 700;
+            margin-bottom: 25px;
+            color: #212529;
+        }
+
+        .feedback-section p {
+            font-size: 0.9rem;
+            color: #6c757d;
+            margin-bottom: 25px;
+        }
+
+        .feedback-item {
+            display: flex;
+            align-items: flex-start;
+            gap: 15px;
+            margin-bottom: 20px;
+        }
+
+        .feedback-item:last-child {
+            margin-bottom: 0;
+        }
+
+        .feedback-icon {
+            width: 28px;
+            height: 28px;
+            border-radius: 50%;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            flex-shrink: 0;
+            font-size: 1.1rem;
+            font-weight: 700;
+        }
+
+        .feedback-icon.check {
+            background-color: #d4edda;
+            color: #28a745;
+        }
+
+        .feedback-icon.cross {
+            background-color: #f8d7da;
+            color: #dc3545;
+        }
+
+        .feedback-details {
+            flex-grow: 1;
+        }
+
+        .feedback-details h3 {
+            font-size: 1rem;
+            font-weight: 600;
+            margin-top: 0;
+            margin-bottom: 5px;
+            color: #343a40;
+        }
+
+        .feedback-details p {
+            font-size: 0.85rem;
+            line-height: 1.4;
+            color: #6c757d;
+            margin: 0;
+        }
