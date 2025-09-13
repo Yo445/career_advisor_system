@@ -23,8 +23,8 @@
             "assets": [
               {
                 "glob": "**/*",
-                "input": "public"
-              }
+                "input": "public",
+              },
             ],
             "styles": [
               "src/styles.css",
@@ -91,7 +91,7 @@
               {
                 "glob": "**/*",
                 "input": "public"
-              }
+              },
             ],
             "styles": [
               "node_modules/@fortawesome/fontawesome-free/css/all.css",

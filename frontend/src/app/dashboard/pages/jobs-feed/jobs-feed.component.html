@@ -60,7 +60,13 @@
     >
       <div class="job-card">
         <div class="job-card-body">
-          <h5 class="job-title">{{ job.title }}</h5>
+          <div class="job-header">
+            <h5 class="job-title">{{ job.title }}</h5>
+            <div class="publisher-logo" [ngClass]="job.publisher">
+              <i *ngIf="job.publisher === 'linkedin'" class="fab fa-linkedin"></i>
+              <i *ngIf="job.publisher === 'glassdoor'" class="fa-solid fa-building"></i>
+            </div>
+          </div>
           <p class="job-company mb-1">
             <strong>{{ job.company }}</strong>
           </p>

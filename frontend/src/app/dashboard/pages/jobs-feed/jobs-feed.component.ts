@@ -13,6 +13,7 @@ interface JobListing {
   tags: string[];
   description: string;
   postedDays: number;
+  publisher: 'linkedin' | 'glassdoor';
 }
 
 @Component({
@@ -38,7 +39,8 @@ export class JobsFeedComponent implements OnInit {
       level: 'Entry Level',
       tags: ['Student', '0-1 Yrs of Exp', 'Bootstrap', 'Angular', 'Computer Science', 'CSS3', 'front-end', 'Git', 'HTML5', 'JavaScript'],
       description: '',
-      postedDays: 16
+      postedDays: 16,
+      publisher: 'linkedin'
     },
     {
       id: 2,
@@ -50,7 +52,8 @@ export class JobsFeedComponent implements OnInit {
       level: 'Entry Level',
       tags: ['Entry Level', '0-3 Yrs of Exp', 'WordPress', 'CSS', 'HTML', 'IT/Software Development', 'Engineering', 'Telecom/Technology'],
       description: '',
-      postedDays: 2
+      postedDays: 2,
+      publisher: 'glassdoor',
     },
     {
       id: 3,
@@ -62,7 +65,8 @@ export class JobsFeedComponent implements OnInit {
       level: 'Entry Level',
       tags: ['Entry Level', '0-3 Yrs of Exp', 'WordPress', 'CSS', 'HTML', 'IT/Software Development', 'Engineering', 'Telecom/Technology'],
       description: '',
-      postedDays: 2
+      postedDays: 2,
+      publisher: 'glassdoor'
     }
     ,
     {
@@ -75,7 +79,8 @@ export class JobsFeedComponent implements OnInit {
       level: 'Entry Level',
       tags: ['Entry Level', '0-3 Yrs of Exp', 'WordPress', 'CSS', 'HTML', 'IT/Software Development', 'Engineering', 'Telecom/Technology'],
       description: '',
-      postedDays: 2
+      postedDays: 2,
+      publisher: 'linkedin'
     }
     ,
     {
@@ -88,7 +93,8 @@ export class JobsFeedComponent implements OnInit {
       level: 'Entry Level',
       tags: ['Entry Level', '0-3 Yrs of Exp', 'WordPress', 'CSS', 'HTML', 'IT/Software Development', 'Engineering', 'Telecom/Technology'],
       description: '',
-      postedDays: 2
+      postedDays: 2,
+      publisher: 'linkedin'
     }
     ,
     {
@@ -101,7 +107,8 @@ export class JobsFeedComponent implements OnInit {
       level: 'Entry Level',
       tags: ['Entry Level', '0-3 Yrs of Exp', 'WordPress', 'CSS', 'HTML', 'IT/Software Development', 'Engineering', 'Telecom/Technology'],
       description: '',
-      postedDays: 2
+      postedDays: 2,
+      publisher: 'linkedin'
     }
     ,
     {
@@ -114,7 +121,8 @@ export class JobsFeedComponent implements OnInit {
       level: 'Entry Level',
       tags: ['Entry Level', '0-3 Yrs of Exp', 'WordPress', 'CSS', 'HTML', 'IT/Software Development', 'Engineering', 'Telecom/Technology'],
       description: '',
-      postedDays: 2
+      postedDays: 2,
+      publisher: 'glassdoor'
     }
     ,
     {
@@ -127,7 +135,8 @@ export class JobsFeedComponent implements OnInit {
       level: 'Entry Level',
       tags: ['Entry Level', '0-3 Yrs of Exp', 'WordPress', 'CSS', 'HTML', 'IT/Software Development', 'Engineering', 'Telecom/Technology'],
       description: '',
-      postedDays: 2
+      postedDays: 2,
+      publisher: 'glassdoor'
     }
     ,
     {
@@ -140,7 +149,8 @@ export class JobsFeedComponent implements OnInit {
       level: 'Entry Level',
       tags: ['Entry Level', '0-3 Yrs of Exp', 'WordPress', 'CSS', 'HTML', 'IT/Software Development', 'Engineering', 'Telecom/Technology'],
       description: '',
-      postedDays: 2
+      postedDays: 2,
+      publisher: 'glassdoor'
     }
     ,
     {
@@ -153,7 +163,8 @@ export class JobsFeedComponent implements OnInit {
       level: 'Entry Level',
       tags: ['Entry Level', '0-3 Yrs of Exp', 'WordPress', 'CSS', 'HTML', 'IT/Software Development', 'Engineering', 'Telecom/Technology'],
       description: '',
-      postedDays: 2
+      postedDays: 2,
+      publisher: 'linkedin'
     }
     ,
     {
@@ -166,7 +177,8 @@ export class JobsFeedComponent implements OnInit {
       level: 'Entry Level',
       tags: ['Entry Level', '0-3 Yrs of Exp', 'WordPress', 'CSS', 'HTML', 'IT/Software Development', 'Engineering', 'Telecom/Technology'],
       description: '',
-      postedDays: 2
+      postedDays: 2,
+      publisher: 'linkedin'
     }
     ,
     {
@@ -179,7 +191,8 @@ export class JobsFeedComponent implements OnInit {
       level: 'Entry Level',
       tags: ['Entry Level', '0-3 Yrs of Exp', 'WordPress', 'CSS', 'HTML', 'IT/Software Development', 'Engineering', 'Telecom/Technology'],
       description: '',
-      postedDays: 2
+      postedDays: 2,
+      publisher: 'glassdoor'
     }
   ];
 

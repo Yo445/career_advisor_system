@@ -28,47 +28,55 @@
 
 .search-filters-section {
   margin-bottom: 3rem;
+}
 
-  .search-card {
-    background: rgba(255, 255, 255, 0.95);
-    border-radius: 1.5rem;
-    padding: 1.2rem;
-    border: 1px solid #0003;
+.search-filters-section .search-card {
+  background: rgba(255, 255, 255, 0.95);
+  border-radius: 1.5rem;
+  padding: 1.2rem;
+  border: 1px solid #0003;
+}
 
-    .form-floating {
-      .form-control,
-      .form-select {
-        border: 1px solid #e2e8f0;
-        border-radius: 0.875rem;
-        padding: 1.125rem 1rem;
-        font-size: 0.8rem;
-        background-color: #ffffff;
-        transition: all 0.2s ease;
+.search-filters-section .search-card .form-floating .form-control,
+.search-filters-section .search-card .form-floating .form-select {
+  border: 1px solid #e2e8f0;
+  border-radius: 0.875rem;
+  padding: 1.125rem 1rem;
+  font-size: 0.8rem;
+  background-color: #ffffff;
+  transition: all 0.2s ease;
+}
 
-        &:focus {
-          border-color: #6366f1;
-          box-shadow: 0 0 0 3px rgba(99, 102, 241, 0.1);
-          background-color: #ffffff;
-        }
+.search-filters-section .search-card .form-floating .form-control:focus,
+.search-filters-section .search-card .form-floating .form-select:focus {
+  border-color: #6366f1;
+  box-shadow: 0 0 0 3px rgba(99, 102, 241, 0.1);
+  background-color: #ffffff;
+}
 
-        &:hover {
-          border-color: #cbd5e1;
-        }
-      }
+.search-filters-section .search-card .form-floating .form-control:hover,
+.search-filters-section .search-card .form-floating .form-select:hover {
+  border-color: #cbd5e1;
+}
+.form-select option{
+  padding: 2%;
+  border-radius: 2%;
+  color: #333;
+}
+.form-select option:hover{
+  color:#6366f1;
+  background-color: #c1c5cc;
+}
+.search-filters-section .search-card .form-floating label {
+  color: #64748b;
+  font-size: 0.8rem;
+  font-weight: 500;
+}
 
-      label {
-        color: #64748b;
-        font-size: 0.8rem;
-        font-weight: 500;
-      }
-    }
-  }
-
-  @media (max-width: 768px) {
-    .search-card {
-      padding: 2rem;
-      border-radius: 1.25rem;
-    }
+@media (max-width: 768px) {
+  .search-filters-section .search-card {
+    padding: 2rem;
+    border-radius: 1.25rem;
   }
 }
 
@@ -132,6 +140,57 @@
   border-radius: 0.5rem;
   padding: 0.5rem;
 }
+
+.job-header {
+  display: flex;
+  justify-content: space-between;
+  align-items: flex-start;
+  margin-bottom: 0.5rem;
+}
+
+.publisher-logo {
+  width: 28px;
+  height: 28px;
+  border-radius: 6px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  transition: all 0.3s ease;
+  /* background-color: #f8f9fa;
+  border: 1px solid #e9ecef; */
+}
+
+.publisher-logo i {
+  font-size: 20px;
+  color: #6c757d;
+  transition: all 0.3s ease;
+}
+
+
+.publisher-logo.linkedin {
+  background-color: rgba(0, 119, 181, 0.1);
+  border-color: rgba(0, 119, 181, 0.2);
+}
+
+.publisher-logo.linkedin i {
+  color: #0077b5;
+}
+
+.publisher-logo.glassdoor {
+  background-color: rgba(12, 170, 65, 0.1);
+  border-color: rgba(12, 170, 65, 0.2);
+}
+
+.publisher-logo.glassdoor i {
+  color: #0caa41;
+}
+.publisher-logo img {
+  width: 100%;
+  height: 100%;
+  object-fit: contain;
+}
+
+
 
 .job-title {
   font-size: 1.1rem;
