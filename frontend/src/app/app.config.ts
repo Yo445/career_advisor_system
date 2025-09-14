@@ -1,7 +1,9 @@
 import { ApplicationConfig, importProvidersFrom, provideZoneChangeDetection } from '@angular/core';
 import { provideRouter } from '@angular/router';
+import { FormsModule } from '@angular/forms'; //
 
 import { routes } from './app.routes';
+
 import {
   provideClientHydration,
   withEventReplay,
@@ -13,7 +15,8 @@ export const appConfig: ApplicationConfig = {
     provideZoneChangeDetection({ eventCoalescing: true }),
     provideRouter(routes),
     provideClientHydration(withEventReplay()),
-    importProvidersFrom(FontAwesomeModule)
+    importProvidersFrom(FontAwesomeModule),
+    importProvidersFrom(FormsModule) 
   ],
 
 };

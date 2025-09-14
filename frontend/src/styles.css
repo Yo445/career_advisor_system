@@ -16,6 +16,7 @@ body {
 /* Custom variables */
 :root {
   --primary-purple: #6366f1;
+  --dark-purple:#595bce;
   --light-purple: #e0e7ff;
   --text-gray: #6b7280;
   --light-gray: #f8fafc;
@@ -73,3 +74,6 @@ body {
   }
 }
 
+
+html, body { height: 100%; }
+body { margin: 0; font-family: Roboto, "Helvetica Neue", sans-serif; }
