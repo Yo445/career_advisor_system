@@ -14,6 +14,7 @@ import { EducationComponent } from './dashboard/pages/profile/sections/education
 import { SkillsComponent } from './dashboard/pages/profile/sections/skills/skills.component';
 import { CvUploadComponent } from './dashboard/pages/profile/sections/cv-upload/cv-upload.component';
 import { CvAnalyzerComponent } from './dashboard/pages/profile/sections/cv-analyzer/cv-analyzer.component';
+import { mock } from 'node:test';
 
 export const routes: Routes = [
   {
@@ -24,6 +25,10 @@ export const routes: Routes = [
   {
     path: 'home',
     component: LandingComponent,
+  },
+   {
+    path: 'MockInterview',
+    component:MockInterviewComponent,
   },
   {
     path: 'signup',
