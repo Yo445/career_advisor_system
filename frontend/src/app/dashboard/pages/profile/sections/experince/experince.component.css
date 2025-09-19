@@ -1,0 +1,18 @@
+
+    .card-box {
+      border: 1px solid #eaeaea;
+      border-radius: 8px;
+      padding: 20px;
+      margin-bottom: 20px;
+      background: #fff;
+    }
+    .btn-add {
+      background-color: #5e77ff;
+      color: #fff;
+      border: none;
+      padding: 8px 16px;
+      border-radius: 6px;
+    }
+    .btn-add:hover {
+      background-color: #445edc;
+    }

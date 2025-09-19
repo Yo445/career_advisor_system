@@ -1,0 +1,156 @@
+/* Main container */
+.signin-container {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  font-family: "Segoe UI", sans-serif;
+  padding: 40px;
+}
+
+/* Logo bar */
+.logo-bar {
+  text-align: center;
+  margin-bottom: 40px;
+}
+.logo {
+  font-weight: bold;
+  font-size: 24px;
+}
+.career {
+  color: #222;
+}
+.advisor {
+  color: #a044b1;
+}
+.tagline {
+  font-size: 12px;
+  color: gray;
+}
+
+/* Signin Box */
+.signin-box {
+  width: 400px;
+  background: #fff;
+  padding: 30px;
+  border-radius: 12px;
+  box-shadow: 0 4px 20px rgba(0,0,0,0.08);
+  text-align: center;
+}
+.signin-title {
+  margin-bottom: 10px;
+  font-size: 22px;
+}
+.subtitle {
+  font-size: 14px;
+  color: #777;
+}
+.subtitle a {
+  color: #5a67d8;
+  font-weight: 500;
+  text-decoration: none;
+}
+
+/* Form */
+.form-group {
+  margin: 15px 0;
+}
+.form-control {
+  width: 100%;
+  padding: 12px;
+  border-radius: 8px;
+  border: 1px solid #ddd;
+  font-size: 14px;
+}
+.password-field {
+  position: relative;
+}
+.toggle-eye {
+  position: absolute;
+  right: 12px;
+  top: 12px;
+  cursor: pointer;
+}
+
+/* Options */
+.options {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin: 15px 0;
+  font-size: 13px;
+}
+.options a {
+  color: #5a67d8;
+  text-decoration: none;
+}
+
+/* Button */
+.btn-signin {
+  background: #5a67d8;
+  color: #fff;
+  border: none;
+  padding: 12px;
+  width: 100%;
+  border-radius: 8px;
+  font-size: 16px;
+  cursor: pointer;
+}
+.btn-signin:hover {
+  background: #4753b8;
+}
+/* Navbar */
+.navbar {
+  width: 100%;
+  padding: 1rem;
+  background: #f9fafb;
+  text-align: center;
+  border-bottom: 1px solid #e5e7eb;
+}
+
+.logo {
+  font-size: 2.5rem;   
+  font-weight: bold;
+  color: #111827;
+  text-align: center;
+}
+
+.logo span {
+  color: #4b6bfb;      
+}
+
+.tagline {
+  margin-top: 0.5rem;
+  font-size: 1rem;
+  color: #374151;
+}
+.header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 10px 30px;
+  font-family: Arial, sans-serif;
+   background-color: #edf0f6;
+}
+
+.logo {
+  font-size: 22px;
+  font-weight: bold;
+}
+
+.career {
+  color: #333; 
+}
+
+.advisor {
+  background: linear-gradient(to right, #3b82f6, #ec4899); 
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  font-weight: 500;
+}
+
+
+.tagline {
+  font-size: 12px;
+  color: #555;
+}
+

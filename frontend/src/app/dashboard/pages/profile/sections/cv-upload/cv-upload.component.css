@@ -1,0 +1,28 @@
+
+    .upload-box {
+      border: 2px dashed #ccc;
+      padding: 60px 20px;
+      text-align: center;
+      border-radius: 6px;
+      margin-bottom: 20px;
+      background: #fafafa;
+      transition: border 0.3s ease;
+    }
+    .upload-box.dragover {
+      border-color: #5e77ff;
+      background: #f0f4ff;
+    }
+    .progress {
+      height: 6px;
+      margin-top: 10px;
+    }
+    .save-btn {
+      background-color: #5e77ff;
+      border: none;
+      color: #fff;
+      padding: 10px 25px;
+      border-radius: 6px;
+    }
+    .save-btn:disabled {
+      background-color: #ccc;
+    }

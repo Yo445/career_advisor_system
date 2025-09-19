@@ -1,0 +1,18 @@
+.main-btn{
+  background-color:var(--primary-purple);
+  transition: 0.5s;
+  -webkit-transition: 0.5s;
+  -moz-transition: 0.5s;
+  -ms-transition: 0.5s;
+  -o-transition: 0.5s;
+  color:white;
+}
+
+.main-btn:hover {
+
+  background-color:#445edc;
+
+
+
+
+}
