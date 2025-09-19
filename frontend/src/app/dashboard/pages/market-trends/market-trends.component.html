@@ -5,6 +5,24 @@
     <p class="page-subtitle">Explore the latest job market trends and insights.</p>
   </div>
 
+  <!-- Filtering Section -->
+  <div class="filter-section">
+    <label for="region-select">Region:</label>
+    <select id="region-select" [(ngModel)]="selectedRegion" (change)="applyFilters()">
+      <option *ngFor="let region of regions" [value]="region">{{region}}</option>
+    </select>
+
+    <label for="experience-select">Experience Level:</label>
+    <select id="experience-select" [(ngModel)]="selectedExperienceLevel" (change)="applyFilters()">
+      <option *ngFor="let level of experienceLevels" [value]="level">{{level}}</option>
+    </select>
+
+    <label for="jobtype-select">Job Type:</label>
+    <select id="jobtype-select" [(ngModel)]="selectedJobType" (change)="applyFilters()">
+      <option *ngFor="let type of jobTypes" [value]="type">{{type}}</option>
+    </select>
+  </div>
+
   <!-- Job Market Overview - Exactly like image -->
   <div class="overview-section">
     <h2 class="section-title">Job Market Overview</h2>

@@ -7,34 +7,23 @@
   align-items: center;
 }
 
-
-
 .btn-primary {
-  background: linear-gradient(135deg,#688ae9 0%,#b46dc6 100%);
   border: none;
   border-radius: 12px;
   font-size: 1.1rem;
   font-weight: 600;
   padding: 1.2% 5%;
-  transition: background 0.5s ease;
 }
-
-.btn-primary:hover {
-  background: linear-gradient(135deg,#4f69af 0%,#7a4986 100%);
-}
-
-
 
 .hero-title {
   font-size: clamp(2.5rem, 8vw, 10rem); /* Responsive scaling */
   margin-bottom: 1rem;
-  font-family: 'Albert Sans', sans-serif;
+  font-family: "Albert Sans", sans-serif;
 }
-
 
 .hero-subtitle {
   font-size: 1.5rem; /* Responsive scaling */
-  font-family: 'Albert Sans', sans-serif;
+  font-family: "Albert Sans", sans-serif;
   color: #6b7280;
   max-width: 600px;
   margin: 0 auto 1.5rem;
@@ -42,61 +31,59 @@
 .career {
   font-weight: 400;
   color: #353d4a;
-  font-family: 'Albert Sans', sans-serif;
+  font-family: "Albert Sans", sans-serif;
 }
 
-
 .scroll-icon {
-	position: relative;
-	margin: 1em;
-	width: 2em;
-	height: 3.5em;
-	border: .13em solid #ccd2db90;
-	border-radius: 2em;
+  position: relative;
+  margin: 1em;
+  width: 2em;
+  height: 3.5em;
+  border: 0.13em solid #ccd2db90;
+  border-radius: 2em;
   margin-top: 3rem;
 }
 
-
-
 .scroll-icon.ex-2 .wheel {
-	position: absolute;
-	left: 50%;
-	top: 15%;
-	width: .6em;
-	height: 1.5em;
-	border: .1em solid #ccd2db90;
-	transform: translate(-50%, 0);
-	border-radius: .6em;
-	overflow: hidden;
+  position: absolute;
+  left: 50%;
+  top: 15%;
+  width: 0.6em;
+  height: 1.5em;
+  border: 0.1em solid #ccd2db90;
+  transform: translate(-50%, 0);
+  border-radius: 0.6em;
+  overflow: hidden;
 }
 
 .scroll-icon.ex-2 .wheel::before {
-	content: '';
-	position: absolute;
-	left: 0;
-	right: 0;
-	top: -100%;
-	bottom: 0;
-	background-image: linear-gradient(0deg, #ccd2db 1.5px, #e1dfdf 1px);
-	background-size: 100% 6px;
-	opacity: .5;
-	animation: ex-2-wheel 1s ease-in-out infinite;
+  content: "";
+  position: absolute;
+  left: 0;
+  right: 0;
+  top: -100%;
+  bottom: 0;
+  background-image: linear-gradient(0deg, #ccd2db 1.5px, #e1dfdf 1px);
+  background-size: 100% 6px;
+  opacity: 0.5;
+  animation: ex-2-wheel 1s ease-in-out infinite;
 }
 
 @keyframes ex-2-wheel {
-	0% {
-		transform: translateY(0);
-		opacity: .5;
-	}
-	40%, 50% {
-		opacity: .8;
-	}
-	90%, 100% {
-		transform: translateY(50%);
-		opacity: .5;
-	}
+  0% {
+    transform: translateY(0);
+    opacity: 0.5;
+  }
+  40%,
+  50% {
+    opacity: 0.8;
+  }
+  90%,
+  100% {
+    transform: translateY(50%);
+    opacity: 0.5;
+  }
 }
-
 
 .btn-scroll {
   padding: 0.4rem 0.75rem;
@@ -110,5 +97,3 @@
     padding: 0.35rem 0.6rem;
   }
 }
-
-

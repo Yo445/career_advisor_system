@@ -1,40 +1,29 @@
-
-
-
-<div class="signin-container" style="margin-top: 70px;">
-
-
-  <!-- Card -->
-  <div class="signin-box" style="width: 50%;">
-    <h3 class="signin-title">Sign in</h3>
-    <p class="subtitle">
-      Don’t have an account ? 
-      <a routerLink="signup" >Create Account </a>
+<div class="signup-container" style="width: 100%">
+  <div class="signup-card">
+    <h2>Welcome back</h2>
+    <p>
+      Don't have account?
+      <a routerLink="/signup">Signup</a>
     </p>
 
-    <!-- Form -->
-    <form>
-      <div class="form-group">
-        <input type="email" placeholder="Email address" class="form-control" />
+    <form (ngSubmit)="onSubmit()">
+      <input type="email" placeholder="Email address" name="email" required />
+
+      <div class="password-wrapper">
+        <input
+          [type]="showPassword ? 'text' : 'password'"
+          placeholder="Password"
+          name="password"
+          required
+        />
+        <i
+          class="fa-solid"
+          [ngClass]="showPassword ? 'fa-eye' : 'fa-eye-slash'"
+          (click)="togglePassword()"
+        ></i>
       </div>
 
-      <div class="form-group password-field">
-        <input type="password" placeholder="Password" class="form-control" />
-        <span class="toggle-eye">👁</span>
-      </div>
-
-      <div class="options">
-        <label>
-          <input type="checkbox" /> Remember Me
-        </label>
-        <a href="#">Forget password?</a>
-      </div>
-
-      <button type="submit" class="btn-signin">
-        Sign In →
-      </button>
+      <button type="submit">Login</button>
     </form>
   </div>
 </div>
-
-
