@@ -73,3 +73,13 @@ body {
   }
 }
 
+.btn-primary {
+  background: linear-gradient(135deg,#688ae9 0%,#b46dc6 100%);
+  border: none;
+  border-radius: 12px;
+  transition: background 0.5s ease;
+}
+
+.btn-primary:hover {
+  background: linear-gradient(135deg,#4f69af 0%,#7a4986 100%);
+}

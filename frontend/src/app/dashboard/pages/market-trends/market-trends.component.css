@@ -25,6 +25,53 @@
   margin: 0;
 }
 
+/* Filtering Section Styles */
+.filter-section {
+  display: flex;
+  gap: 1.5rem;
+  margin-bottom: 2rem;
+  align-items: center;
+  flex-wrap: wrap;
+  background: white;
+  border-radius: 8px;
+  padding: 1.5rem;
+  box-shadow: 0 1px 3px rgba(0, 0, 0, 0.1);
+  border: 1px solid #e2e8f0;
+}
+
+.filter-section label {
+  font-weight: 600;
+  color: #2d3748;
+  font-size: 0.9rem;
+}
+
+.filter-section select {
+  padding: 0.6rem 1rem;
+  border: 1px solid #cbd5e0;
+  border-radius: 6px;
+  background-color: #f7fafc;
+  font-size: 0.9rem;
+  color: #2d3748;
+  cursor: pointer;
+  outline: none;
+  -webkit-appearance: none;
+  -moz-appearance: none;
+  appearance: none;
+  background-image: url('data:image/svg+xml;charset=US-ASCII,%3Csvg%20xmlns%3D%22http%3A%2F%2Fwww.w3.org%2F2000%2Fsvg%22%20width%3D%22292.4%22%20height%3D%22292.4%22%3E%3Cpath%20fill%3D%22%23718096%22%20d%3D%22M287%20197.3L159.2%2069.5c-4.7-4.7-12.3-4.7-17%200L5.3%20197.3c-4.7%204.7-4.7%2012.3%200%2017l7.7%207.7c4.7%204.7%2012.3%204.7%2017%200l110.6-110.6c4.7-4.7%2012.3-4.7%2017%200l110.6%20110.6c4.7%204.7%2012.3%204.7%2017%200l7.7-7.7c4.7-4.7%204.7-12.3%200-17z%22%2F%3E%3C%2Fsvg%3E');
+  background-repeat: no-repeat;
+  background-position: right 0.7em top 50%;
+  background-size: 0.65em auto;
+}
+
+.filter-section select:hover {
+  border-color: #a0aec0;
+}
+
+.filter-section select:focus {
+  border-color: #4a90e2;
+  box-shadow: 0 0 0 2px rgba(74, 144, 226, 0.2);
+}
+
 /* Section Styling - Clean and Simple */
 .overview-section,
 .salary-section,

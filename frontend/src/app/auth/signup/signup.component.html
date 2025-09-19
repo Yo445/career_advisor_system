@@ -1,10 +1,16 @@
+<div class="signup-container" style="width: 100%">
 
-<div class="signup-container" style="width: 100%;">
   <div class="signup-card">
+    <div class=" text-center">
+          <h3 class="">
+        <span style="color: #353d4a">career</span>
+        <span class="gradient px-1">advisor</span>
+      </h3>
+    </div>
+
     <h2>Create Account</h2>
     <p>
       Already have account?
-     
       <a routerLink="/login">Log In</a>
     </p>
 
@@ -13,17 +19,34 @@
         <input type="text" placeholder="Full Name" name="fullname" required />
         <input type="text" placeholder="Username" name="username" required />
       </div>
-
       <input type="email" placeholder="Email address" name="email" required />
       <input type="tel" placeholder="Phone Number" name="phone" />
-
-      <input type="password" placeholder="Password" name="password" required />
-      <input type="password" placeholder="Confirm Password" name="confirmPassword" required />
-
-     
-      <button type="submit">Create Account →</button>
+      <div class="password-wrapper">
+        <input
+          [type]="showPassword ? 'text' : 'password'"
+          placeholder="Password"
+          name="password"
+          required
+        />
+        <i
+          class="fa-solid"
+          [ngClass]="showPassword ? 'fa-eye' : 'fa-eye-slash'"
+          (click)="togglePassword()"
+        ></i>
+      </div>            <div class="password-wrapper">
+        <input
+          [type]="showPassword ? 'text' : 'password'"
+                  placeholder="Confirm Password"
+        name="confirmPassword"
+          required
+        />
+        <i
+          class="fa-solid"
+          [ngClass]="showPassword ? 'fa-eye' : 'fa-eye-slash'"
+          (click)="togglePassword()"
+        ></i>
+      </div>
+      <button type="submit">Create Account</button>
     </form>
   </div>
 </div>
-
-

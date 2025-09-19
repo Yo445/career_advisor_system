@@ -30,7 +30,7 @@
 }
 
 .signup-card a {
-  color: #4b6bfb;
+  color: #8b7dda;
   font-weight: 500;
   text-decoration: none;
 }
@@ -63,22 +63,75 @@ input {
 }
 
 input:focus {
-  border-color: #4b6bfb;
+  border-color: #8b7dda;
   box-shadow: 0 0 0 2px rgba(75, 107, 251, 0.2);
 }
 
 button {
+  background-color: #8b7dda;
   margin-top: 1rem;
   padding: 0.85rem;
-  background: #4b6bfb;
+  border-radius: 12px;
   color: #fff;
   border: none;
-  border-radius: 8px;
   font-size: 1rem;
   cursor: pointer;
-  transition: background 0.2s ease;
+  transition: background-color 0.3s ease;
 }
 
-button:hover {
-  background: #3a54d0;
+button:hover{
+  background-color: #6a60a4;
+}
+
+
+.password-wrapper {
+  position: relative;
+  display: flex;
+  align-items: center;
+}
+
+.password-wrapper input {
+  width: 100%;
+  padding-right: 2.5rem; /* space for the eye icon */
+}
+
+.password-wrapper i {
+  position: absolute;
+  right: 10px;
+  cursor: pointer;
+  color: #808080;
+}
+.password-wrapper i:hover {
+  color: #000;
+}
+
+
+
+.career-title {
+  text-align: center;
+  font-size: 1.8rem;
+  margin-bottom: 0.5rem; /* space before "Create Account" */
+}
+
+.password-wrapper {
+  position: relative;
+  display: flex;
+  align-items: center;
+  margin-bottom: 1rem;
+}
+
+.password-wrapper input {
+  width: 100%;
+  padding-right: 2.5rem;
+}
+
+.password-wrapper i {
+  position: absolute;
+  right: 10px;
+  cursor: pointer;
+  color: #808080;
+}
+
+.password-wrapper i:hover {
+  color: #000;
 }

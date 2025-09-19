@@ -1,156 +1,106 @@
-/* Main container */
-.signin-container {
+
+/* Signup Form Layout */
+.signup-container {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  min-height: calc(100vh - 64px); /* subtract navbar height */
+  background: #fff;
+  width: 100%;
+}
+
+.signup-card {
+  width: 420px;
+  padding: 2rem;
+  border-radius: 12px;
+  background: #fff;
+  text-align: center;
+}
+
+.signup-card h2 {
+  font-size: 1.8rem;
+  margin-bottom: 0.5rem;
+  font-weight: 600;
+}
+
+.signup-card p {
+  margin-bottom: 1.5rem;
+  color: #555;
+  font-size: 0.95rem;
+}
+
+.signup-card a {
+  color: #8b7dda;
+  font-weight: 500;
+  text-decoration: none;
+}
+
+.signup-card a:hover {
+  text-decoration: underline;
+}
+
+form {
   display: flex;
   flex-direction: column;
-  align-items: center;
-  font-family: "Segoe UI", sans-serif;
-  padding: 40px;
+  gap: 1rem;
 }
 
-/* Logo bar */
-.logo-bar {
-  text-align: center;
-  margin-bottom: 40px;
-}
-.logo {
-  font-weight: bold;
-  font-size: 24px;
-}
-.career {
-  color: #222;
-}
-.advisor {
-  color: #a044b1;
-}
-.tagline {
-  font-size: 12px;
-  color: gray;
-}
-
-/* Signin Box */
-.signin-box {
-  width: 400px;
-  background: #fff;
-  padding: 30px;
-  border-radius: 12px;
-  box-shadow: 0 4px 20px rgba(0,0,0,0.08);
-  text-align: center;
-}
-.signin-title {
-  margin-bottom: 10px;
-  font-size: 22px;
-}
-.subtitle {
-  font-size: 14px;
-  color: #777;
-}
-.subtitle a {
-  color: #5a67d8;
-  font-weight: 500;
-  text-decoration: none;
-}
-
-/* Form */
-.form-group {
-  margin: 15px 0;
-}
-.form-control {
-  width: 100%;
-  padding: 12px;
-  border-radius: 8px;
-  border: 1px solid #ddd;
-  font-size: 14px;
-}
-.password-field {
-  position: relative;
-}
-.toggle-eye {
-  position: absolute;
-  right: 12px;
-  top: 12px;
-  cursor: pointer;
-}
-
-/* Options */
-.options {
+.form-row {
   display: flex;
-  justify-content: space-between;
-  align-items: center;
-  margin: 15px 0;
-  font-size: 13px;
+  gap: 1rem;
 }
-.options a {
-  color: #5a67d8;
-  text-decoration: none;
+.form-row input{
+    width: 40%;
+}
+input {
+  padding: 0.75rem;
+  border: 1px solid #d1d5db;
+  border-radius: 8px;
+  font-size: 0.95rem;
+  flex: 1;
+  outline: none;
+  transition: border 0.2s ease;
 }
 
-/* Button */
-.btn-signin {
-  background: #5a67d8;
+input:focus {
+  border-color: #8b7dda;
+  box-shadow: 0 0 0 2px rgba(75, 107, 251, 0.2);
+}
+
+button {
+  background-color: #8b7dda;
+  margin-top: 1rem;
+  padding: 0.85rem;
+  border-radius: 12px;
   color: #fff;
   border: none;
-  padding: 12px;
-  width: 100%;
-  border-radius: 8px;
-  font-size: 16px;
-  cursor: pointer;
-}
-.btn-signin:hover {
-  background: #4753b8;
-}
-/* Navbar */
-.navbar {
-  width: 100%;
-  padding: 1rem;
-  background: #f9fafb;
-  text-align: center;
-  border-bottom: 1px solid #e5e7eb;
-}
-
-.logo {
-  font-size: 2.5rem;   
-  font-weight: bold;
-  color: #111827;
-  text-align: center;
-}
-
-.logo span {
-  color: #4b6bfb;      
-}
-
-.tagline {
-  margin-top: 0.5rem;
   font-size: 1rem;
-  color: #374151;
+  cursor: pointer;
+  transition: background-color 0.3s ease;
 }
-.header {
+
+button:hover{
+  background-color: #6a60a4;
+}
+
+
+.password-wrapper {
+  position: relative;
   display: flex;
-  justify-content: space-between;
   align-items: center;
-  padding: 10px 30px;
-  font-family: Arial, sans-serif;
-   background-color: #edf0f6;
 }
 
-.logo {
-  font-size: 22px;
-  font-weight: bold;
+.password-wrapper input {
+  width: 100%;
+  padding-right: 2.5rem; /* space for the eye icon */
 }
 
-.career {
-  color: #333; 
+.password-wrapper i {
+  position: absolute;
+  right: 10px;
+  cursor: pointer;
+  color: #808080;
 }
-
-.advisor {
-  background: linear-gradient(to right, #3b82f6, #ec4899); 
-  -webkit-background-clip: text;
-  -webkit-text-fill-color: transparent;
-  font-weight: 500;
+.password-wrapper i:hover {
+  color: #000;
 }
-
-
-.tagline {
-  font-size: 12px;
-  color: #555;
-}
-
