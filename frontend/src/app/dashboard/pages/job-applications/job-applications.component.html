@@ -1,1 +1,144 @@
-<p>job-applications works!</p>
+<div class="container mt-4">
+  <h2 class="mb-4 text-center">Applications</h2>
+
+  <!-- Search + Filters -->
+  <div class="row mb-3">
+    <div class="col-md-6">
+      <input type="text" class="form-control" placeholder="Search applications">
+    </div>
+    <div class="col-md-2">
+      <select class="form-select">
+        <option>Status</option>
+        <option>Applied</option>
+        <option>Interviewing</option>
+        <option>Offer</option>
+        <option>Rejected</option>
+      </select>
+    </div>
+    <div class="col-md-2">
+      <select class="form-select">
+        <option>Priority</option>
+        <option>High</option>
+        <option>Medium</option>
+        <option>Low</option>
+      </select>
+    </div>
+    <div class="col-md-2">
+      <select class="form-select">
+        <option>Tags</option>
+        <option>Engineering</option>
+        <option>Marketing</option>
+        <option>Design</option>
+        <option>Data Science</option>
+      </select>
+    </div>
+  </div>
+
+  <!-- Applications Table -->
+  <div class="card shadow-sm">
+    <div class="card-body">
+      <table class="table table-hover align-middle">
+        <thead class="table-light">
+          <tr>
+            <th>Company</th>
+            <th>Role</th>
+            <th>Status</th>
+            <th>Applied Date</th>
+            <th>Last Activity</th>
+            <th>Next Reminder</th>
+            <th>Priority</th>
+            <th>Tags</th>
+            <th>Actions</th>
+          </tr>
+        </thead>
+        <tbody>
+          <tr>
+            <td>TechCorp</td>
+            <td>Senior Software Engineer</td>
+            <td><span class="badge bg-primary">Applied</span></td>
+            <td>2024-01-15</td>
+            <td>2024-01-15</td>
+            <td>2024-01-22</td>
+            <td><span class="badge bg-danger">High</span></td>
+            <td><span class="badge bg-secondary">Engineering</span></td>
+            <td>
+              <button class="btn btn-sm btn-info">View</button>
+              <button class="btn btn-sm btn-warning">Edit</button>
+              <button class="btn btn-sm btn-danger">Delete</button>
+            </td>
+          </tr>
+          <tr>
+            <td>Innovote Solutions</td>
+            <td>Product Manager</td>
+            <td><span class="badge bg-warning text-dark">Interviewing</span></td>
+            <td>2024-01-10</td>
+            <td>2024-01-18</td>
+            <td>2024-01-25</td>
+            <td><span class="badge bg-warning text-dark">Medium</span></td>
+            <td><span class="badge bg-secondary">Product</span></td>
+            <td>
+              <button class="btn btn-sm btn-info">View</button>
+              <button class="btn btn-sm btn-warning">Edit</button>
+              <button class="btn btn-sm btn-danger">Delete</button>
+            </td>
+          </tr>
+          <tr>
+            <td>Global Dynamics</td>
+            <td>Data Scientist</td>
+            <td><span class="badge bg-danger">Rejected</span></td>
+            <td>2024-01-05</td>
+            <td>2024-01-08</td>
+            <td>N/A</td>
+            <td><span class="badge bg-secondary">Low</span></td>
+            <td><span class="badge bg-secondary">Data Science</span></td>
+            <td>
+              <button class="btn btn-sm btn-info">View</button>
+              <button class="btn btn-sm btn-warning">Edit</button>
+              <button class="btn btn-sm btn-danger">Delete</button>
+            </td>
+          </tr>
+        </tbody>
+      </table>
+    </div>
+
+
+  <!-- Pagination -->
+  <nav aria-label="Page navigation example" class="mt-3">
+    <ul class="pagination justify-content-center">
+      <li class="page-item disabled"><a class="page-link" href="#">Previous</a></li>
+      <li class="page-item active"><a class="page-link" href="#">1</a></li>
+      <li class="page-item"><a class="page-link" href="#">2</a></li>
+      <li class="page-item"><a class="page-link" href="#">3</a></li>
+      <li class="page-item"><a class="page-link" href="#">Next</a></li>
+    </ul>
+  </nav>
+</div>
+ <!-- Analytics Section -->
+
+  <div class="row mt-4">
+    <div class="col-md-4">
+      <div class="card text-center shadow-sm">
+        <div class="card-body">
+          <h5>Total Applications</h5>
+          <h3>12</h3>
+        </div>
+      </div>
+    </div>
+    <div class="col-md-4">
+      <div class="card text-center shadow-sm">
+        <div class="card-body">
+          <h5>Accepted</h5>
+          <h3 class="text-success">3</h3>
+        </div>
+      </div>
+    </div>
+    <div class="col-md-4">
+      <div class="card text-center shadow-sm">
+        <div class="card-body">
+          <h5>Rejected</h5>
+          <h3 class="text-danger">5</h3>
+        </div>
+      </div>
+    </div>
+  </div>
+  </div>
