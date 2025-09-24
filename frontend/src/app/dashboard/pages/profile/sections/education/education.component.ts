@@ -24,8 +24,10 @@ export class EducationComponent {
   schoolName:string | null=null
   cert:string |null=null
   selectedLanguage:string|null=null
-  study: string | null = null;
-
+  study: string | null = null
+  cName: string | null = null
+  organization : string | null = null
+  crName : string | null = null
   selectedCountry: string | null = null;
 
     countries: string[] = [

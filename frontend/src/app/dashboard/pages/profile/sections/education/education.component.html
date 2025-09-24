@@ -14,7 +14,7 @@
       <div class="my-button degree p-2 px-5 rounded-1 text-center mb-2" style="width:30%"
           [ngClass]="{'active': isActive}"
           (click)="toggleActive()">
-          
+
                       Bachelor's Degree
 
       </div>
@@ -396,7 +396,6 @@
                               </div>
 
 
-
                         <div class="g-year">
                             <label for="g-year" class="mt-3 form-label">Graduation Year</label>
                               <select class="form-select" id="g-year" placeholder="choose"
@@ -476,24 +475,296 @@
                 </div>
 
 
-
-
-
-
-
     </div>
 
+
+
+
     <div class="box4 border border-light-subtle p-4 px-5 rounded-1 mt-4 bg-white" style="width:80%">
+
         <p class="fw-semibold mb-4">Certifications</p>
-        <button type="button" class="btn main-btn" data-bs-toggle="modal" data-bs-target="#staticBackdrop3">+ Add Certification</button>
+
+          <button type="button" class="btn main-btn" data-bs-toggle="modal" data-bs-target="#staticBackdrop3">
+                +  Add Certificate
+        </button>
+
+          <div class="modal fade" id="staticBackdrop3" data-bs-backdrop="static" data-bs-keyboard="false" tabindex="-1" aria-labelledby="staticBackdropLabel" aria-hidden="true">
+                  <div class="modal-dialog modal-dialog-centered modal-dialog-scrollable">
+                    <div class="modal-content">
+
+                      <div class="modal-header">
+                        <h1 class="modal-title fw-semibold fs-5" id="staticBackdropLabel3">Add Certificate</h1>
+                        <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+                      </div>
+
+                      <div class="modal-body">
+
+                      <form #form="ngForm" class="row g-3 needs-validation m-auto" (ngSubmit)="onSubmit(form)" novalidate style="width:95%">
+
+                        <div class="cname-input">
+
+                            <label for="cname" class="mt-3 form-label">Certificate Name<span class="text-danger"> * </span></label>
+
+                            <input class="form-control"
+                            type="text"
+                            placeholder="e.g.,PMP,CISSP"
+
+                            id="cname"
+                            name="cname"
+                            [(ngModel)]="cName"
+                            required
+                            #cnameInput="ngModel"
+                            [class.is-invalid]="cnameInput.invalid && cnameInput.touched">
 
 
 
+                              <div class="invalid-feedback"
+                                *ngIf="cnameInput.invalid && cnameInput.touched">
+                                    please add school name
+                                  </div>
+
+
+                            </div>
+
+
+
+                          <div class="organization-input">
+
+                            <label for="organization" class="mt-3 form-label">organization/Institution<span class="text-danger"> * </span></label>
+
+                            <input class="form-control"
+                            type="text"
+                            placeholder="e.g.AUC,...."
+                            aria-label="default input example"
+                            id="organization"
+                            name="organization"
+                            [(ngModel)]="organization"
+                            required
+                            #organizationInput="ngModel"
+                            [class.is-invalid]="organizationInput.invalid && organizationInput.touched">
+
+
+                              <div class="invalid-feedback"
+                                *ngIf="organizationInput.invalid && organizationInput.touched">
+                                    This field is required.
+                                  </div>
+
+
+                            </div>
+
+
+                              <div class="d-flex flex-column" style="width:45%">
+
+                              <label for="c-date" class="mt-3 form-label">Date Awarded</label>
+                              <select class="form-select" id="c-date" placeholder="choose"
+                                name="c-date">
+
+                                <option selected disabled>Choose...</option>
+                                 <option *ngFor="let year of years" [value]="year">
+                                        {{ year }}
+                                  </option>
+
+
+                              </select>
+
+                              </div>
+
+
+
+                            <div class="grade-input">
+
+                            <label for="grade" class="form-label">Grade<span class="text-danger"> * </span></label>
+                              <select class="form-select" id="grade" placeholder="choose..." required
+                                name="grade"
+                                [(ngModel)]="grade"
+                                #gradeInput="ngModel"
+                                [class.is-invalid]="gradeInput.invalid && (gradeInput.dirty || gradeInput.touched)">
+
+                                <option selected disabled [ngValue]="null" >Choose...</option>
+
+                                <option value="A">A/Excellent/85-100%</option>
+                                <option value="B">B/very Good/75-85%</option>
+                                <option value="C">C/Good/65-75%</option>
+                                <option value="D">D/Fair/50-65%</option>
+
+
+                              </select>
+
+                              <div class="invalid-feedback"
+                              *ngIf="degreeLevelInput.invalid && (degreeLevelInput.dirty || degreeLevelInput.touched)">
+                                Please select a grade.
+                              </div>
+
+
+                        </div>
+
+
+                                <div class="desc">
+                                  <label for="description" class="form-label">Additional Info</label>
+                                  <textarea
+                                    class="form-control"
+                                    id="description"
+                                    name="description"
+                                    placeholder="Describe what the certificate was about in detail"
+                                    [(ngModel)]="description"
+                                    #descriptionInput="ngModel"
+                                    maxlength="250">
+                                  </textarea>
+
+                                  <div *ngIf="descriptionInput.errors?.['maxlength']" class="invalid-feedback">
+                                    The description cannot exceed 250 characters.
+                                  </div>
+
+
+                                </div>
+
+
+                            <div class="modal-footer">
+
+                                <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Close</button>
+
+                                <button type="submit" class="btn main-btn">Save</button>
+
+                              </div>
+
+                        </form>
+
+                      </div>
+
+
+              </div>
+
+        </div>
+      </div>
     </div>
 
     <div class="box5 border border-light-subtle p-4 px-5 rounded-1 mt-4 bg-white" style="width:80%">
         <p class="fw-semibold mb-4">Courses</p>
-        <button type="button" class="btn main-btn">+ Add course</button>
+
+        <button type="button" class="btn main-btn" data-bs-toggle="modal" data-bs-target="#staticBackdrop4">
+                +  Add Course
+        </button>
+
+          <div class="modal fade" id="staticBackdrop4" data-bs-backdrop="static" data-bs-keyboard="false" tabindex="-1" aria-labelledby="staticBackdropLabel" aria-hidden="true">
+                  <div class="modal-dialog modal-dialog-centered modal-dialog-scrollable">
+                    <div class="modal-content">
+
+                      <div class="modal-header">
+                        <h1 class="modal-title fw-semibold fs-5" id="staticBackdropLabel4">Add Course</h1>
+                        <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+                      </div>
+
+                      <div class="modal-body">
+
+                      <form #form="ngForm" class="row g-3 needs-validation m-auto" (ngSubmit)="onSubmit(form)" novalidate style="width:95%">
+
+                        <div class="cname-input">
+
+                            <label for="cname" class="mt-3 form-label">Course Topic<span class="text-danger"> * </span></label>
+
+                            <input class="form-control"
+                            type="text"
+                            placeholder="e.g.,Java,marketing"
+
+                            id="crname"
+                            name="crname"
+                            [(ngModel)]="crName"
+                            required
+                            #crnameInput="ngModel"
+                            [class.is-invalid]="crnameInput.invalid && crnameInput.touched">
+
+
+
+                              <div class="invalid-feedback"
+                                *ngIf="crnameInput.invalid && crnameInput.touched">
+                                    please add course name
+                                  </div>
+
+
+                            </div>
+
+
+
+                          <div class="organization-input">
+
+                            <label for="organization" class="mt-3 form-label">organization/Institution<span class="text-danger"> * </span></label>
+
+                            <input class="form-control"
+                            type="text"
+                            placeholder="e.g.AUC,...."
+                            aria-label="default input example"
+                            id="organization2"
+                            name="organization"
+                            [(ngModel)]="organization"
+                            required
+                            #organizationInput="ngModel"
+                            [class.is-invalid]="organizationInput.invalid && organizationInput.touched">
+
+
+                              <div class="invalid-feedback"
+                                *ngIf="organizationInput.invalid && organizationInput.touched">
+                                    This field is required.
+                                  </div>
+
+
+                            </div>
+
+
+                              <div class="d-flex flex-column" style="width:45%">
+
+                              <label for="c-date2" class="mt-3 form-label">Date Awarded</label>
+                              <select class="form-select" id="c-date2" placeholder="choose"
+                                name="c-date">
+
+                                <option selected disabled>Choose...</option>
+                                 <option *ngFor="let year of years" [value]="year">
+                                        {{ year }}
+                                  </option>
+
+
+                              </select>
+
+                              </div>
+
+
+
+                                <div class="desc">
+                                  <label for="description" class="form-label">Additional Info</label>
+                                  <textarea
+                                    class="form-control"
+                                    id="description"
+                                    name="description"
+                                    placeholder="Describe what the certificate was about in detail"
+                                    [(ngModel)]="description"
+                                    #descriptionInput="ngModel"
+                                    maxlength="250">
+                                  </textarea>
+
+                                  <div *ngIf="descriptionInput.errors?.['maxlength']" class="invalid-feedback">
+                                    The description cannot exceed 250 characters.
+                                  </div>
+
+
+                                </div>
+
+
+                            <div class="modal-footer">
+
+                                <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Close</button>
+
+                                <button type="submit" class="btn main-btn">Save</button>
+
+                              </div>
+
+                        </form>
+
+                      </div>
+
+
+              </div>
+
+        </div>
+      </div>
 
 
 
