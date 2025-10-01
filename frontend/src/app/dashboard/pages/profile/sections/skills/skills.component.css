@@ -1,3 +1,10 @@
+/* Define CSS Variables */
+:root {
+    --primary-purple: #8c7ae6; /* Defining the purple color for reuse */
+    --hover-purple: #7a68c7;
+}
+
+/* Custom Button Color */
 .main-btn{
   background-color:var(--primary-purple);
   transition: 0.5s;
@@ -13,6 +20,46 @@
   background-color:#445edc;
 
 
+}
 
 
+/* Skill Badge Styling */
+.skill-badge {
+    background-color: #e0f7fa;
+    color: #000;
+    padding: 0.5rem 0.75rem;
+    font-weight: 500;
+    border-radius: 50rem; /* Force pill shape */
+    display: flex;
+    align-items: center;
+}
+.skill-badge .btn-close {
+    margin-left: 0.5rem;
+    font-size: 0.75rem;
+    filter: grayscale(100%);
+}
+
+/* Modal specific styles (overriding Bootstrap's hidden state) */
+.modal {
+    background-color: rgba(0,0,0,0.5);
+    display: none;
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    overflow: auto;
+    z-index: 1050;
+}
+
+/* Custom class to show the modal (used in [class.show-modal]="isModalOpen()") */
+.modal.show-modal {
+    display: block;
+}
+
+/* Ensure modal content is centered vertically */
+.modal-dialog {
+    height: 100%;
+    display: flex;
+    align-items: center;
 }
