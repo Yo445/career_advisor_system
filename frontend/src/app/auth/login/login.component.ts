@@ -14,7 +14,7 @@ export class LoginComponent {
   constructor(private router: Router) {}
 
   onSubmit() {
-    this.router.navigate(['/login']);
+    this.router.navigate(['/dashboard']);
   }
 
   showPassword: boolean = false;

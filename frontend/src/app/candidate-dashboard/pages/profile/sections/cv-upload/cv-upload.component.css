@@ -1,0 +1,44 @@
+.upload-box {
+  border: 2px dashed #ccc;
+  padding: 25px 15px;
+  text-align: center;
+  border-radius: 8px;
+  margin-bottom: 20px;
+  background: #fafafa;
+  transition: border 0.3s ease, background 0.3s ease;
+  max-width: 320px;
+}
+
+.upload-box.dragover {
+  border-color: #5e77ff;
+  background: #f0f4ff;
+}
+
+.badge {
+  font-size: 0.85rem;
+  padding: 0.4em 0.6em;
+}
+
+.progress {
+  height: 6px;
+  margin-top: 10px;
+}
+
+.save-btn {
+  background-color: #5e77ff;
+  border: none;
+  color: #fff;
+  padding: 8px 20px;
+  border-radius: 6px;
+  font-size: 0.9rem;
+  transition: background 0.3s ease;
+  min-width: 120px;
+}
+
+.save-btn:hover:enabled {
+  background-color: #4a62d6;
+}
+
+.save-btn:disabled {
+  background-color: #ccc;
+}
