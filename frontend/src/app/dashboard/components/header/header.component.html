@@ -11,9 +11,11 @@
         </h3>
       </div>
 
-      <!-- Right Column: User Menu -->
-      <div class="header-col right d-flex justify-content-end">
-        <div class="dropdown">
+      <!-- Right Column: User Menu + Logout -->
+      <div
+        class="header-col right d-flex justify-content-end align-items-center gap-3"
+      >
+        <!-- <div class="dropdown">
           <button
             class="btn btn-link dropdown-toggle user-menu-btn"
             type="button"
@@ -21,7 +23,6 @@
             data-bs-toggle="dropdown"
             aria-expanded="false"
           >
-
             <i class="fas fa-user"></i>
           </button>
           <ul
@@ -29,19 +30,18 @@
             aria-labelledby="userMenuDropdown"
           >
             <li>
-              <a class="dropdown-item" routerLink="profile"
-              routerLinkActive="active"
-                ><i class="fas fa-user me-2"></i>Profile</a
-              >
-            </li>
-            <li><hr class="dropdown-divider" /></li>
-            <li>
-              <a class="dropdown-item logout" href="#"
-                ><i class="fas fa-sign-out-alt me-2"></i>Logout</a
-              >
+              <a class="dropdown-item" routerLink="profile" routerLinkActive="active">
+                <i class="fas fa-user me-2"></i>Profile
+              </a>
             </li>
           </ul>
-        </div>
+        </div> -->
+
+        <!-- Elegant Logout Button -->
+        <button class="logout-btn" (click)="logout()">
+          <i class="fas fa-sign-out-alt"></i>
+          <span>Logout</span>
+        </button>
       </div>
     </div>
   </div>

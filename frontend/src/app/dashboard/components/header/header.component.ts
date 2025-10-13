@@ -18,12 +18,20 @@ interface NavigationItem {
 export class HeaderComponent  {
 
     navigationItems: NavigationItem[] = [
-    { path: 'jobs-feed', label: 'Explore Path', icon: 'fa-solid fa-certificate' },
+    { path: 'jobs', label: 'Explore Path', icon: 'fa-solid fa-certificate' },
     { path: 'applications', label: 'Applications', icon: 'fa-solid fa-book' },
-    { path: 'mock-interview', label: 'matched Jobs', icon: 'fa-solid fa-chalkboard-user' },
+    { path: 'reminders', label: 'Reminders', icon: 'fa-solid fa-alarm-clock' },
+    { path: 'profile', label: 'Profile', icon: 'fa-solid fa-user' },
   ];
 
   constructor(private router: Router) {}
+  logout() {
+  // Clear auth data or token
+  localStorage.removeItem('authUser');
+  // Navigate to login
+  this.router.navigate(['/login']);
+}
+
 
 }
 

@@ -8,7 +8,7 @@ import { NavBottomComponent } from '../../components/nav-bottom/nav-bottom.compo
   templateUrl:'./profile.component.html',
   styleUrls: ['./profile.component.css'],
   standalone: true,
-  imports: [CommonModule, RouterOutlet, NavBottomComponent]
+  imports: [CommonModule]
 })
 export class ProfileComponent {
 

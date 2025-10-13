@@ -19,41 +19,23 @@ interface NavItem {
 export class NavBottomComponent {
   navItems: NavItem[] = [
     {
-      path: 'general-info',
-      icon: 'fas fa-user',
-      label: 'General Info',
-      title: 'General Information'
+      path: 'applications-list',
+      icon: 'fa-solid fa-cube',
+      label: 'Applications',
+      title: 'Applications'
     },
     {
-      path: 'cv-upload',
-      icon: 'fas fa-upload',
-      label: 'Upload CV',
-      title: 'Upload your CV'
+      path: 'remider',
+      icon: 'fa-solid fa-alarm-clock',
+      label: 'Reminders',
+      title: 'Reminders'
     },
     {
-      path: 'experience',
-      icon: 'fas fa-briefcase',
-      label: 'Experience',
-      title: 'Experience'
+      path: 'analytics',
+      icon: 'fa-solid fa-chart-simple',
+      label: 'Analytics',
+      title: 'Analytics'
     },
-    {
-      path: 'skill',
-      icon: 'fas fa-cogs',
-      label: 'Skills',
-      title: 'Skills'
-    },
-    {
-      path: 'education',
-      icon: 'fas fa-graduation-cap',
-      label: 'Education',
-      title: 'Education'
-    },
-    {
-      path: 'cv-analyzer',
-      icon: 'fas fa-chart-line',
-      label: 'CV Analyzer',
-      title: 'CV Analyzer'
-    }
   ];
 
   constructor(private router: Router) {}
