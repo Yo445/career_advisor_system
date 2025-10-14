@@ -2,7 +2,7 @@ import { Routes } from '@angular/router';
 import { LandingComponent } from './landing/landing.component';
 import { SignupComponent } from './auth/signup/signup.component';
 import { LoginComponent } from './auth/login/login.component';
-import { JobsFeedComponent } from './dashboard/pages/jobs-feed/jobs-feed.component';
+import { JobsComponent } from './dashboard/pages/jobs/jobs.component';
 import { JobApplicationsComponent } from './dashboard/pages/job-applications/job-applications.component';
 import { DashboardComponent } from './dashboard/dashboard.component';
 import { ProfileComponent } from './dashboard/pages/profile/profile.component';
@@ -33,7 +33,7 @@ export const routes: Routes = [
     component: DashboardComponent,
     children: [
       { path: '', redirectTo: 'jobs', pathMatch: 'full' },
-      { path: 'jobs', component: JobsFeedComponent },
+      { path: 'jobs', component: JobsComponent },
       { path: 'applications', component: JobApplicationsComponent },
       { path: 'reminders', component: ReminderComponent },
       { path: 'profile', component: ProfileComponent},

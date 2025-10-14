@@ -1,5 +1,5 @@
 import { CommonModule } from '@angular/common';
-import { Component, OnInit } from '@angular/core';
+import { Component } from '@angular/core';
 import { FormsModule } from '@angular/forms';
 
 interface Job {
@@ -20,10 +20,10 @@ interface Job {
   selector: 'app-jobs-feed',
   standalone: true,
   imports: [CommonModule, FormsModule],
-  templateUrl: './jobs-feed.component.html',
-  styleUrl: './jobs-feed.component.css'
+  templateUrl: './jobs.component.html',
+  styleUrl: './jobs.component.css'
 })
-export class JobsFeedComponent {
+export class JobsComponent {
   searchQuery: string = '';
   selectedLevel: string = '';
   selectedCountry: string = '';

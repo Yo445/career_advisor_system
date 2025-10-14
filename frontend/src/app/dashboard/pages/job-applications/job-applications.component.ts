@@ -194,4 +194,62 @@ export class JobApplicationsComponent {
       publisher: 'glassdoor'
     }
   ];
+
+
+
+  selectedJob: Job | null = null;
+  showEditModal = false;
+  showDeleteModal = false;
+
+  openEditModal(job: Job) {
+    this.selectedJob = { ...job };
+    this.showEditModal = true;
+  }
+
+  closeEditModal() {
+    this.showEditModal = false;
+    this.selectedJob = null;
+  }
+
+  openDeleteModal(job: Job) {
+    this.selectedJob = job;
+    this.showDeleteModal = true;
+  }
+
+  closeDeleteModal() {
+    this.showDeleteModal = false;
+    this.selectedJob = null;
+  }
+
+  saveEdit() {
+    if (this.selectedJob) {
+      const index = this.jobs.findIndex(j => j.id === this.selectedJob!.id);
+      if (index !== -1) {
+        this.jobs[index] = { ...this.selectedJob };
+      }
+      this.closeEditModal();
+    }
+  }
+
+  confirmDelete() {
+    if (this.selectedJob) {
+      this.jobs = this.jobs.filter(j => j.id !== this.selectedJob!.id);
+      this.closeDeleteModal();
+    }
+  }
+
+  removeTag(tag: string) {
+    if (this.selectedJob) {
+      this.selectedJob.tags = this.selectedJob.tags.filter(t => t !== tag);
+    }
+  }
+
+  addTag(event: KeyboardEvent) {
+    const input = event.target as HTMLInputElement;
+    if (event.key === 'Enter' && input.value.trim() && this.selectedJob) {
+      event.preventDefault();
+      this.selectedJob.tags.push(input.value.trim());
+      input.value = '';
+    }
+  }
 }
