@@ -1,1 +1,188 @@
-<div>genral info works</div>
+<div class="profile-container mx-5 my-5">
+
+
+  <div class="main-content d-flex flex-column">
+
+<div class="profile-header">
+  <div class="profile-photo-container">
+
+    <div class="avatar-wrapper">
+      <img *ngIf="profilePhotoUrl" [src]="profilePhotoUrl" alt="Profile Photo" class="profile-image">
+      <div *ngIf="!profilePhotoUrl" class="avatar-placeholder">
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="#a0a0a0">
+          <path d="M12 12c2.21 0 4-1.79 4-4s-1.79-4-4-4-4 1.79-4 4 1.79 4 4 4zm0 2c-2.67 0-8 1.34-8 4v2h16v-2c0-2.66-5.33-4-8-4z"/>
+        </svg>
+      </div>
+    </div>
+
+    <div class="profile-info mx-3">
+      <h4>Profile Photo</h4>
+      <p>You can upload a .jpg, .png, or .gif photo with max size of 5MB.</p>
+
+      <input
+        type="file"
+        #fileInput
+        style="display: none;"
+        (change)="onFileSelected($event)"
+        accept=".jpg,.jpeg,.png,.gif"
+      >
+
+      <button class="upload-btn" (click)="triggerFileInput()">Upload Your Photo</button>
+    </div>
+  </div>
+
+</div>
+
+<hr>
+
+      <form (ngSubmit)="onSave()" #profileForm="ngForm">
+        <h5 class="section-title">Your Personal Info</h5>
+        <div class="form-row">
+          <div class="form-group">
+            <label for="firstName">First Name <span class="text-danger">*</span></label>
+            <input id="firstName" type="text" [(ngModel)]="userData.firstName" name="firstName" placeholder="Enter your first name" required>
+          </div>
+          <div class="form-group">
+            <label for="middleName">Middle Name <span class="text-danger">*</span></label>
+            <input id="middleName" type="text" [(ngModel)]="userData.middleName" name="middleName" placeholder="Enter your middle name" >
+          </div>
+            <div class="form-group">
+            <label for="lastName">Last Name <span class="text-danger">*</span></label>
+            <input id="lastName" type="text" [(ngModel)]="userData.lastName" name="lastName" placeholder="Enter your last name" >
+          </div>
+        </div>
+
+        <p class="section-title fw-normal">Birthdate <span class="text-danger">*</span></p>
+
+
+          <div class="form-row three-col-birthdate">
+
+            <div class="form-group">
+              <select [(ngModel)]="userData.birthdate.day" name="birthDay" required>
+              <option value="" disabled selected>Day</option>
+              <option *ngFor="let day of dayOptions" [value]="day">{{ day }}</option>
+              </select>
+
+            </div>
+
+                  <div class="form-group">
+                    <select [(ngModel)]="userData.birthdate.month" name="birthMonth" required>
+                      <option value="" disabled selected>Month</option>
+                      <option *ngFor="let month of monthOptions" [value]="month.value">{{ month.name }}</option>
+                    </select>
+                  </div>
+
+                  <div class="form-group">
+                    <select [(ngModel)]="userData.birthdate.year" name="birthYear" required>
+                      <option value="" disabled selected>Year</option>
+                      <option *ngFor="let year of yearOptions" [value]="year">{{ year }}</option>
+                    </select>
+                  </div>
+          </div>
+
+        <p class="section-title fw-normal">Gender <span class="text-danger">*</span></p>
+        <div class="radio-group">
+          <label><input type="radio" [(ngModel)]="userData.gender" name="gender" value="Male"> Male</label>
+          <label><input type="radio" [(ngModel)]="userData.gender" name="gender" value="Female"> Female</label>
+        </div>
+
+        <p class="section-title fw-normal">Marital status<span class="text-danger">*</span></p>
+        <div class="radio-group">
+          <label><input type="radio" [(ngModel)]="userData.maritalStatus" name="maritalStatus" value="Unspecified"> Unspecified</label>
+          <label><input type="radio" [(ngModel)]="userData.maritalStatus" name="maritalStatus" value="Single"> Single</label>
+          <label><input type="radio" [(ngModel)]="userData.maritalStatus" name="maritalStatus" value="Married"> Married</label>
+        </div>
+
+        <p class="section-title fw-normal">Military Status<span class="text-danger">*</span></p>
+        <div class="form-row single-col military-status-row">
+    <div class="form-group">
+        <select
+          [(ngModel)]="userData.militaryStatus"
+          name="militaryStatus"
+          required
+        >
+            <option value="" disabled selected>Select...</option>
+
+            <option *ngFor="let status of militaryStatusOptions" [value]="status">{{ status }}</option>
+        </select>
+    </div>
+      </div>
+
+
+
+        <h5 class="section-title">Your location</h5>
+        <div class="form-row single-col">
+    <div class="form-group">
+        <label for="country">Country <span class="text-danger">*</span></label>
+        <select
+            id="country"
+            [(ngModel)]="userData.country"
+            name="country"
+            required
+        >
+            <option value="" disabled selected>Select Your Country</option>
+            <option *ngFor="let c of countryOptions.slice(1)" [value]="c">{{ c }}</option>
+        </select>
+    </div>
+</div>
+
+<div class="form-row single-col">
+    <div class="form-group">
+        <label for="city">City <span class="text-danger">*</span></label>
+        <select
+            id="city"
+            [(ngModel)]="userData.city"
+            name="city"
+            required
+        >
+            <option value="" disabled selected>Select Your City</option>
+            <option *ngFor="let city of cityOptions.slice(1)" [value]="city">{{ city }}</option>
+        </select>
+    </div>
+</div>
+
+<div class="form-row single-col">
+    <div class="form-group">
+        <label for="area">Area</label>
+        <select
+            id="area"
+            [(ngModel)]="userData.area"
+            name="area"
+        >
+            <option value="" disabled selected>Select Your Area</option>
+            <option *ngFor="let area of areaOptions.slice(1)" [value]="area">{{ area }}</option>
+        </select>
+    </div>
+</div>
+
+<div class="form-row single-col">
+    <div class="form-group">
+        <label for="postalCode">Your Postal Code</label>
+        <input
+            id="postalCode"
+            type="text"
+            placeholder="Enter Your Postal Code"
+            [(ngModel)]="userData.postalCode"
+            name="postalCode"
+        >
+    </div>
+</div>
+
+        <h5 class="section-title">Your Contact info</h5>
+        <div class="form-row">
+          <div class="form-group">
+            <label for="mobileNumber">Mobile Number <span class="text-danger">*</span></label>
+            <input id="mobileNumber" type="text" [(ngModel)]="userData.mobileNumber" name="mobileNumber" placeholder="Enter Your Mobile Number" required>
+          </div>
+          <div class="form-group">
+            <label for="alternativeNumber">Alternative Number <span class="text-danger">*</span></label>
+            <input id="alternativeNumber" type="text" [(ngModel)]="userData.alternativeNumber" name="alternativeNumber" placeholder ="Enter Your Alternative Number">
+          </div>
+        </div>
+
+        <button type="submit" class="save-btn">Save Changes</button>
+      </form>
+
+    </div>
+  </div>
+
