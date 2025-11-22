@@ -194,7 +194,7 @@
   transition: all 0.3s ease;
 }
 
-/* Enhanced Animated Gradient Keyframes */
+/*Enhanced Animated Gradient Keyframes */
 @keyframes borderGradient {
   0% {
     background-position: 0% 50%;
@@ -233,4 +233,16 @@
   .tag {
     font-size: 0.7rem;
   }
+}
+.btn-purple {
+  background-color: #6f42c1;
+  color: #fff;
+  border: none;
+  border-radius: 8px;
+  transition: all 0.3s ease;
+}
+
+.btn-purple:hover {
+  background-color: #5a32a3;
+  color: #fff;
 }
