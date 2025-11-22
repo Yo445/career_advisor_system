@@ -1,3 +1,44 @@
-<p>
-  reminder works!
-</p>
+<div class="reminder-container">
+  <div class="reminder-header">
+    <h2>My Reminders</h2>
+    <button class="add-reminder-btn" (click)="addReminder()">Add Reminder</button>
+  </div>
+
+  <div class="modal-overlay" *ngIf="showAddReminderForm">
+    <div class="add-reminder-form">
+      <h3>Add New Reminder</h3>
+      <div class="form-group">
+        <label for="title">Title:</label>
+        <input type="text" id="title" [(ngModel)]="newReminder.title" placeholder="Enter reminder title" required>
+      </div>
+      <div class="form-group">
+        <label for="description">Description:</label>
+        <textarea id="description" [(ngModel)]="newReminder.description" placeholder="Enter reminder description" rows="3" required></textarea>
+      </div>
+      <div class="form-group">
+        <label for="date">Date:</label>
+        <input type="date" id="date" [(ngModel)]="newReminder.date" required>
+      </div>
+      <div class="form-group">
+        <label for="time">Time:</label>
+        <input type="time" id="time" [(ngModel)]="newReminder.time" required>
+      </div>
+      <div class="form-actions">
+        <button class="btn-save" (click)="saveReminder()">Save Reminder</button>
+        <button class="btn-cancel" (click)="cancelAddReminder()">Cancel</button>
+      </div>
+    </div>
+  </div>
+
+  <div class="reminder-list">
+    <!-- Reminder Cards -->
+    <div class="reminder-card" *ngFor="let reminder of reminders">
+      <h3 class="reminder-title">{{ reminder.title }}</h3>
+      <p class="reminder-description">{{ reminder.description }}</p>
+      <div class="reminder-date">
+        <i class="far fa-calendar-alt"></i>
+        <span>{{ reminder.date }} - {{ reminder.time }}</span>
+      </div>
+    </div>
+  </div>
+</div>
