@@ -1,7 +1,9 @@
-<div class="reminder-container">
-  <div class="reminder-header">
-    <h2>My Reminders</h2>
-    <button class="add-reminder-btn" (click)="addReminder()">Add Reminder</button>
+<div class="reminder-container" style="padding:3% 0%;">
+  <div class="hero-section text-center mb-5">
+    <h1 class="hero-title">My Reminders</h1>
+<button class="add-reminder-btn" (click)="addReminder()">
+  <i class="fas fa-plus"></i> Add Reminder
+</button>
   </div>
 
   <div class="modal-overlay" *ngIf="showAddReminderForm">
