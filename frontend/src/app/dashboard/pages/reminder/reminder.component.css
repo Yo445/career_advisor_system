@@ -55,7 +55,6 @@
   color: #fff;
 }
 
-
 /* ===== Modal ===== */
 .modal-overlay {
   position: fixed;
@@ -142,13 +141,11 @@
   width: 100%; /* FULL WIDTH INSIDE CONTAINER */
   max-width: 1000px; /* MAKE IT BIGGER */
   margin: 0 auto; /* CENTER THE CARD */
-box-shadow: 0 1px 3px rgba(0, 0, 0, 0.06);
-    border: 1px solid #ddd;
+  box-shadow: 0 1px 3px rgba(0, 0, 0, 0.06);
+  border: 1px solid #ddd;
   border-left: 5px solid #4caf50;
   transition: 0.3s ease;
 }
-
-
 
 .reminder-title {
   margin: 0 0 8px 0;

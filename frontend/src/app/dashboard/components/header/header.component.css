@@ -1,13 +1,13 @@
 .header-container {
   background-color: #E5E7EE;
   border-bottom: 1px solid #CBD2DC;
-  z-index: 1050; /* stay above content */
 }
 
 .fixed-top {
   position: sticky; /* keeps both header + nav stuck */
   top: 0;
   width: 100%;
+  z-index: 30;
 }
 
 /* Header Row */

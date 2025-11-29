@@ -1,137 +1,49 @@
-<div class="hero-section text-center mb-5 position-relative">
-  <h1 class="hero-title m-0">Applications</h1>
-  <button
-    class="btn btn-purple position-absolute top-0 end-0"
-    data-bs-toggle="modal"
-    data-bs-target="#addApplicationModal"
-    style="transform: translateY(10%);"
-  >
-    + Add Application
-  </button>
+<div class="reminder-container" style="padding: 3% 0%">
+  <div class="hero-section text-center mb-5 mt-2">
+    <h1 class="hero-title">Applications</h1>
+    <button class="add-reminder-btn" (click)="openAddForm()">
+      <i class="fas fa-plus"></i> Add Application
+    </button>
+  </div>
+
+
+  <!-- Job Listings (reminder-style) -->
+  <div class="reminder-list container my-4">
+    <div *ngIf="filteredJobs.length === 0" class="text-center py-5 text-muted">
+      <i class="fas fa-search fa-2x mb-3"></i>
+      <p>No jobs match your filters.</p>
+    </div>
+
+    <div class="reminder-card" *ngFor="let job of filteredJobs">
+      <h3 class="reminder-title">{{ job.title }}</h3>
+      <p class="reminder-description">{{ job.company }} — {{ job.location }}</p>
+      <div class="reminder-date">
+        <i class="far fa-calendar-alt"></i>
+        <span>{{ job.postedDays }} days ago</span>
+      </div>
+    </div>
+  </div>
+
+  <!-- Add Application overlay (reminder-style) -->
+  <div class="modal-overlay" *ngIf="showAddApplicationForm" style="z-index: 60;">
+    <div class="add-application-form">
+      <h3>Add New Application</h3>
+      <div class="form-group">
+        <label>Company Name</label>
+        <input type="text" class="form-control" [(ngModel)]="newApp.company" name="company" />
+      </div>
+      <div class="form-group">
+        <label>Role</label>
+        <input type="text" class="form-control" [(ngModel)]="newApp.role" name="role" />
+      </div>
+      <div class="form-group">
+        <label>Date</label>
+        <input type="date" class="form-control" [(ngModel)]="newApp.date" name="date" />
+      </div>
+      <div class="form-actions">
+        <button class="btn-cancel" (click)="cancelAddApplication()">Cancel</button>
+        <button class="btn-save" (click)="saveNewApplication()">Add Application</button>
+      </div>
+    </div>
+  </div>
 </div>
-
-   <!--Search and Filters -->
-  <div class="filter-bar">
-    <form class="row g-2">
-      <!-- Search bar with icon -->
-      <div class="col-md-6">
-        <div class="input-group">
-          <span class="input-group-text"><i class="fas fa-search"></i></span>
-          <input
-            type="text"
-            class="form-control"
-            placeholder="Search jobs..."
-            [(ngModel)]="searchText"
-            name="searchText"
-          />
-        </div>
-      </div>
-
-      <!--Level dropdown --> 
-      <div class="col-md-3">
-        <select class="form-select" [(ngModel)]="selectedLevel" name="level">
-          <option value="">All Levels</option>
-          <option value="Entry Level">Entry Level</option>
-          <option value="Mid Level">Mid Level</option>
-          <option value="Senior Level">Senior Level</option>
-          <option value="Executive">Executive</option>
-        </select>
-      </div>
-
-      <!-- Country dropdown-->
-      <div class="col-md-3">
-        <select class="form-select" [(ngModel)]="selectedCountry" name="country">
-          <option value="">All Countries</option>
-          <option value="Egypt">Egypt</option>
-          <option value="UAE">UAE</option>
-          <option value="Saudi Arabia">Saudi Arabia</option>
-          <option value="Remote">Remote</option>
-        </select>
-      </div>
-    </form>
-  </div>
-
-  <!-- Job Listings -->
-  <div class="container my-4">
-    <div class="row">
-      <div
-        class="col-lg-3 col-md-6 col-sm-12 mb-4"
-        *ngFor="let job of filteredJobs"
-      >
-        <div class="job-card">
-          <div class="job-card-body">
-            <div class="job-header">
-              <h5 class="job-title">{{ job.title }}</h5>
-              <div class="publisher-logo" [ngClass]="job.publisher">
-                <i *ngIf="job.publisher === 'linkedin'" class="fab fa-linkedin"></i>
-                <i *ngIf="job.publisher === 'glassdoor'" class="fa-solid fa-building"></i>
-              </div>
-            </div>
-            <p class="job-company mb-1">
-              <strong>{{ job.company }}</strong>
-            </p>
-            <p class="job-location mb-2 text-muted">
-              {{ job.location }}
-            </p>
-            <div class="job-tags mb-2">
-              <span class="tag" *ngFor="let tag of job.tags">{{ tag }}</span>
-            </div>
-            <small class="text-muted">{{ job.postedDays }} days ago</small>
-          </div>
-        </div>
-      </div>
-
-      <!-- No results -->
-      <div *ngIf="filteredJobs.length === 0" class="text-center py-5 text-muted">
-        <i class="fas fa-search fa-2x mb-3"></i>
-        <p>No jobs match your filters.</p>
-      </div>
-    </div>
-  </div>
-
-
-
-  <!-- Modal -->
-  <div
-    class="modal fade"
-    id="addApplicationModal"
-    tabindex="-1"
-    aria-labelledby="addApplicationModalLabel"
-    aria-hidden="true"
-  >
-    <div class="modal-dialog">
-      <div class="modal-content p-3">
-        <div class="modal-header">
-          <h5 class="modal-title" id="addApplicationModalLabel">Add New Application</h5>
-          <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
-        </div>
-        <div class="modal-body">
-          <form>
-            <div class="mb-3">
-              <label class="form-label">Company Name</label>
-              <input type="text" class="form-control" [(ngModel)]="newApp.company" name="company" />
-            </div>
-            <div class="mb-3">
-              <label class="form-label">Role</label>
-              <input type="text" class="form-control" [(ngModel)]="newApp.role" name="role" />
-            </div>
-            <div class="mb-3">
-              <label class="form-label">Date</label>
-              <input type="date" class="form-control" [(ngModel)]="newApp.date" name="date" />
-            </div>
-          </form>
-        </div>
-        <div class="modal-footer">
-          <button
-            type="button"
-            class="btn btn-purple"
-            (click)="addApplication()"
-            data-bs-dismiss="modal"
-          >
-            Add Application
-          </button>
-        </div>
-      </div>
-    </div>
-  </div>
-
