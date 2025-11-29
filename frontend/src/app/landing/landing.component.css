@@ -1,6 +1,6 @@
 .hero-section {
   height: 70vh; /* Full screen height */
-  background: #ffffff;
+  background: #ded6e042;
   display: flex;
   flex-direction: column;
   justify-content: end; /* center */
@@ -137,3 +137,68 @@
 .btn-close { background: transparent; border: 0; width: 28px; height: 28px; }
 
 .modal-footer { border-top: 1px solid #eef2f7; display:flex; gap: 0.5rem; padding: 0.75rem 1rem; }
+
+
+.container-img {
+   width: 100%;
+  height: 100%;
+  background: radial-gradient(
+      50% 50% at 100% 0,
+      #a42c9e 0% 5%,
+      #ffffff 6% 15%,
+      #a42c9e 16% 25%,
+      #ffffff 26% 35%,
+      #a42c9e 36% 45%,
+      #ffffff 46% 55%,
+      #a42c9e 56% 65%,
+      #ffffff 66% 75%,
+      #a42c9e 76% 85%,
+      #ffffff 86% 95%,
+      #0000 96%
+    ),
+    radial-gradient(
+      50% 50% at 0 100%,
+      #a42c9e 0% 5%,
+      #ffffff 6% 15%,
+      #a42c9e 16% 25%,
+      #ffffff 26% 35%,
+      #a42c9e 36% 45%,
+      #ffffff 46% 55%,
+      #a42c9e 56% 65%,
+      #ffffff 66% 75%,
+      #a42c9e 76% 85%,
+      #ffffff 86% 95%,
+      #0000 96%
+    ),
+    radial-gradient(
+      50% 50%,
+      #a42c9e 0% 5%,
+      #ffffff 6% 15%,
+      #a42c9e 16% 25%,
+      #ffffff 26% 35%,
+      #a42c9e 36% 45%,
+      #ffffff 46% 55%,
+      #a42c9e 56% 65%,
+      #ffffff 66% 75%,
+      #a42c9e 76% 85%,
+      #ffffff 86% 95%,
+      #0000 96%
+    ),
+    radial-gradient(
+        50% 50%,
+        #a42c9e 0% 5%,
+        #ffffff 6% 15%,
+        #a42c9e 16% 25%,
+        #ffffff 26% 35%,
+        #a42c9e 36% 45%,
+        #ffffff 46% 55%,
+        #a42c9e 56% 65%,
+        #ffffff 66% 75%,
+        #a42c9e 76% 85%,
+        #ffffff 86% 95%,
+        #0000 96%
+      )
+      38px 38px;
+  background-size: 76px 76px;
+  background-color: #a03fca;
+}
