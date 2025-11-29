@@ -44,20 +44,17 @@
 }
 
 .reminder-card {
-  background-color: #fff; /* Explicitly white as requested */
+  background-color: #fff;
   border-radius: 15px;
   box-shadow: 0 5px 20px rgba(0, 0, 0, 0.08);
   padding: 25px;
   display: flex;
   flex-direction: column;
   justify-content: space-between;
-  transition: all 0.6s cubic-bezier(0.25, 0.46, 0.45, 0.94); /* Changed transition to match job-card */
+  transition: all 0.6s cubic-bezier(0.25, 0.46, 0.45, 0.94);
   position: relative;
   overflow: visible;
-  cursor: pointer;
 }
-
-
 
 .reminder-card:hover::before {
   opacity: 1;
@@ -65,7 +62,7 @@
 }
 
 .reminder-card:hover::after {
-  opacity: 0; /* Changed to 0 to make the blurred background completely invisible on hover */
+  opacity: 0;
   animation: borderGradient 2s linear infinite;
 }
 
@@ -78,27 +75,80 @@
   0% {
     background-position: 0% 50%;
   }
+
   25% {
     background-position: 100% 0%;
   }
+
   50% {
     background-position: 100% 100%;
   }
+
   75% {
     background-position: 0% 100%;
   }
+
   100% {
     background-position: 0% 50%;
   }
+}
+
+.card-header {
+  display: flex;
+  justify-content: space-between;
+  align-items: flex-start;
+  margin-bottom: 10px;
 }
 
 .reminder-title {
   font-family: "Google Sans", sans-serif;
   font-size: 1.6em;
   color: var(--primary-purple);
-  margin-top: 0;
-  margin-bottom: 15px;
+  margin: 0;
   font-weight: 700;
+  flex: 1;
+}
+
+.card-actions {
+  display: flex;
+  gap: 8px;
+  margin-left: 10px;
+}
+
+.btn-edit,
+.btn-delete {
+  background: none;
+  border: none;
+  cursor: pointer;
+  padding: 8px;
+  border-radius: 8px;
+  transition: all 0.3s ease;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.btn-edit {
+  color: #3b82f6;
+}
+
+.btn-edit:hover {
+  background-color: rgba(59, 130, 246, 0.1);
+  transform: scale(1.1);
+}
+
+.btn-delete {
+  color: #ef4444;
+}
+
+.btn-delete:hover {
+  background-color: rgba(239, 68, 68, 0.1);
+  transform: scale(1.1);
+}
+
+.btn-edit i,
+.btn-delete i {
+  font-size: 1.1em;
 }
 
 .reminder-description {
@@ -125,13 +175,59 @@
   font-size: 1.1em;
 }
 
+.loading-message,
+.error-message {
+  text-align: center;
+  padding: 20px;
+  margin: 20px 0;
+  border-radius: 12px;
+  font-size: 1.1em;
+}
+
+.loading-message {
+  background-color: rgba(104, 138, 233, 0.1);
+  color: var(--primary-purple);
+}
+
+.loading-message i {
+  margin-right: 8px;
+}
+
+.error-message {
+  background-color: rgba(239, 68, 68, 0.1);
+  color: #ef4444;
+}
+
+.error-message i {
+  margin-right: 8px;
+}
+
+.no-reminders {
+  grid-column: 1 / -1;
+  text-align: center;
+  padding: 60px 20px;
+  color: var(--text-gray);
+}
+
+.no-reminders i {
+  font-size: 4em;
+  color: var(--border-gray);
+  margin-bottom: 20px;
+  display: block;
+}
+
+.no-reminders p {
+  font-size: 1.2em;
+  margin: 0;
+}
+
 .modal-overlay {
   position: fixed;
   top: 0;
   left: 0;
   width: 100%;
   height: 100%;
-  background-color: transparent; /* Changed to transparent as requested */
+  background-color: transparent;
   display: flex;
   justify-content: center;
   align-items: center;
@@ -144,7 +240,7 @@
   box-shadow: 0 10px 30px rgba(0, 0, 0, 0.2);
   padding: 30px;
   width: 90%;
-  max-width: 400px; /* Made smaller as requested */
+  max-width: 400px;
   opacity: 0;
   animation: fadeInScale 0.3s ease-out forwards;
   border: 1px solid var(--border-color);
@@ -155,6 +251,7 @@
     opacity: 0;
     transform: scale(0.95);
   }
+
   to {
     opacity: 1;
     transform: scale(1);

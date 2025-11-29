@@ -4,9 +4,19 @@
     <button class="add-reminder-btn" (click)="addReminder()">Add Reminder</button>
   </div>
 
+  <!-- Loading Spinner -->
+  <div class="loading-message" *ngIf="isLoading">
+    <i class="fas fa-spinner fa-spin"></i> Loading...
+  </div>
+
+  <!-- Error Message -->
+  <div class="error-message" *ngIf="errorMessage && !isLoading">
+    <i class="fas fa-exclamation-circle"></i> {{ errorMessage }}
+  </div>
+
   <div class="modal-overlay" *ngIf="showAddReminderForm">
     <div class="add-reminder-form">
-      <h3>Add New Reminder</h3>
+      <h3>{{ isEditMode ? 'Edit Reminder' : 'Add New Reminder' }}</h3>
       <div class="form-group">
         <label for="title">Title:</label>
         <input type="text" id="title" [(ngModel)]="newReminder.title" placeholder="Enter reminder title" required>
@@ -24,16 +34,32 @@
         <input type="time" id="time" [(ngModel)]="newReminder.time" required>
       </div>
       <div class="form-actions">
-        <button class="btn-save" (click)="saveReminder()">Save Reminder</button>
+        <button class="btn-save" (click)="saveReminder()">{{ isEditMode ? 'Update' : 'Save' }} Reminder</button>
         <button class="btn-cancel" (click)="cancelAddReminder()">Cancel</button>
       </div>
     </div>
   </div>
 
   <div class="reminder-list">
+    <!-- No Reminders Message -->
+    <div class="no-reminders" *ngIf="reminders.length === 0 && !isLoading">
+      <i class="far fa-calendar-times"></i>
+      <p>No reminders yet. Click "Add Reminder" to create one!</p>
+    </div>
+
     <!-- Reminder Cards -->
     <div class="reminder-card" *ngFor="let reminder of reminders">
-      <h3 class="reminder-title">{{ reminder.title }}</h3>
+      <div class="card-header">
+        <h3 class="reminder-title">{{ reminder.title }}</h3>
+        <div class="card-actions">
+          <button class="btn-edit" (click)="editReminder(reminder)" title="Edit">
+            <i class="fas fa-edit"></i>
+          </button>
+          <button class="btn-delete" (click)="deleteReminder(reminder._id)" title="Delete">
+            <i class="fas fa-trash"></i>
+          </button>
+        </div>
+      </div>
       <p class="reminder-description">{{ reminder.description }}</p>
       <div class="reminder-date">
         <i class="far fa-calendar-alt"></i>
